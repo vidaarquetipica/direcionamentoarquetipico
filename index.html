@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direcionamento Arquetípico | Érika</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --clr-bg-dark: #0A040E;
+            --clr-bg-surface: #14081E;
+            --clr-primary-purple: #27103C;
+            --clr-secondary-wine: #31111D;
+            --clr-secondary-green: #0E2218;
+            --clr-gold-light: #F4E2AA;
+            --clr-gold-base: #D8B15A;
+            --clr-gold-dark: #9E7D35;
+            --clr-text-main: #F3F1F5;
+            --clr-text-muted: #AFA8B8;
+            --clr-white: #FFFFFF;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+            --shadow-glow: 0 0 25px rgba(216, 177, 90, 0.2);
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: 1px solid rgba(216, 177, 90, 0.15);
+            --container-width: 1140px;
+            --section-padding-y: 100px;
+            --radius-md: 12px;
+            --radius-lg: 24px;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: var(--font-body); background-color: var(--clr-bg-dark); color: var(--clr-text-main); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--clr-white); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        .container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 24px; }
+        section { padding: var(--section-padding-y) 0; position: relative; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 15px; }
+        .section-header h2 span { color: var(--clr-gold-base); font-style: italic; }
+        .section-header p { color: var(--clr-text-muted); font-size: 1.125rem; }
+        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: var(--glass-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+
+        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--clr-gold-light), var(--clr-gold-base)); color: var(--clr-bg-dark); font-family: var(--font-body); font-weight: 600; font-size: 1.125rem; padding: 20px 40px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); box-shadow: var(--shadow-glow); text-align: center; cursor: pointer; border: none; }
+        .cta-button:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(216, 177, 90, 0.4); background: linear-gradient(135deg, var(--clr-white), var(--clr-gold-light)); }
+        .cta-button-small { background: transparent; color: var(--clr-gold-base); border: 1px solid var(--clr-gold-base); padding: 10px 24px; border-radius: 4px; font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); }
+        .cta-button-small:hover { background: var(--clr-gold-base); color: var(--clr-bg-dark); }
+
+        .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(10, 4, 14, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0; transition: var(--transition-smooth); }
+        .header.scrolled { padding: 10px 0; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-heading); font-size: 1.5rem; color: var(--clr-gold-base); font-weight: 700; }
+        .logo span { font-family: var(--font-body); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-muted); font-weight: 400; margin-left: 10px; border-left: 1px solid var(--clr-text-muted); padding-left: 10px; }
+
+        .hero { padding-top: 150px; min-height: 100vh; display: flex; align-items: center; background: radial-gradient(circle at 80% 20%, var(--clr-primary-purple), var(--clr-bg-dark) 60%); }
+        .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+        .badge { display: inline-block; padding: 6px 16px; border: 1px solid var(--clr-gold-dark); color: var(--clr-gold-light); border-radius: 50px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 20px; }
+        .hero h1 span { color: var(--clr-gold-base); font-style: italic; }
+        .subtitle { font-size: 1.25rem; color: var(--clr-text-muted); margin-bottom: 30px; }
+        .hero-quote { border-left: 2px solid var(--clr-gold-base); padding-left: 20px; margin-bottom: 30px; }
+        .hero-quote p { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; color: var(--clr-white); }
+        .hero-features { margin-bottom: 40px; }
+        .hero-features li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+        .hero-features i { color: var(--clr-gold-base); font-size: 0.7rem; margin-top: 6px; }
+        .cta-wrapper { display: flex; flex-direction: column; gap: 15px; }
+        .cta-subtext { display: flex; flex-direction: column; gap: 5px; }
+        .price-hint { font-size: 0.9rem; color: var(--clr-text-muted); }
+        .scarcity { font-size: 0.85rem; color: var(--clr-gold-dark); }
+        .image-frame { position: relative; padding: 15px; }
+        .image-frame::before { content: ''; position: absolute; top: 0; left: 0; right: 30px; bottom: 30px; border: 1px solid var(--clr-gold-base); border-radius: 4px; z-index: 1; }
+        .image-frame img { position: relative; z-index: 2; border-radius: 4px; box-shadow: var(--shadow-soft); transform: translate(15px, 15px); }
+
+        .para-quem { background-color: var(--clr-bg-surface); }
+        .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .premium-card { padding: 50px 40px; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); position: relative; overflow: hidden; }
+        .card-green { background: linear-gradient(145deg, var(--clr-secondary-green), #08140e); border: 1px solid rgba(216, 177, 90, 0.3); }
+        .card-wine { background: linear-gradient(145deg, var(--clr-secondary-wine), #1a080f); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 30px; }
+        .card-green .card-icon { background: rgba(216, 177, 90, 0.1); color: var(--clr-gold-base); }
+        .card-wine .card-icon { background: rgba(255, 255, 255, 0.05); color: #e5989b; }
+        .premium-card h3 { font-size: 1.5rem; margin-bottom: 25px; }
+        .card-green h3 { color: var(--clr-gold-base); }
+        .card-wine h3 { color: #e5989b; }
+        .check-list li, .cross-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; font-size: 1.05rem; }
+        .check-list i { color: var(--clr-gold-base); margin-top: 5px; }
+        .cross-list i { color: #e5989b; margin-top: 5px; }
+
+        .como-funciona { background-color: var(--clr-bg-dark); }
+        .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+        .timeline::before { content: ''; position: absolute; top: 25px; left: 50px; right: 50px; height: 1px; background: rgba(216, 177, 90, 0.2); z-index: 1; }
+        @media (max-width: 992px) { .timeline::before { display: none; } }
+        .timeline-item { position: relative; z-index: 2; }
+        .timeline-dot { width: 50px; height: 50px; background: var(--clr-bg-dark); border: 1px solid var(--clr-gold-base); color: var(--clr-gold-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.2rem; margin: 0 auto 30px; }
+        .timeline-content { padding: 30px 20px; text-align: center; height: calc(100% - 80px); }
+        .timeline-content h4 { color: var(--clr-gold-base); margin-bottom: 15px; font-size: 1.2rem; }
+        .timeline-content p { font-size: 0.95rem; color: var(--clr-text-muted); }
+
+        .entregas { background-color: var(--clr-bg-surface); }
+        .entregas-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+        .mockups { display: flex; flex-direction: column; gap: 30px; }
+        .mockup-img { border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-soft); }
+        .entregas-list { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .entrega-card { display: flex; align-items: center; gap: 20px; padding: 20px; background: rgba(0,0,0,0.2); border-left: 2px solid var(--clr-gold-dark); border-radius: 4px; transition: var(--transition-smooth); }
+        .entrega-card:hover { background: rgba(216, 177, 90, 0.05); border-left-color: var(--clr-gold-base); transform: translateX(10px); }
+        .entrega-card i { font-size: 1.5rem; color: var(--clr-gold-base); width: 30px; text-align: center; }
+        .entrega-card h4 { font-family: var(--font-body); font-size: 1.05rem; margin-bottom: 4px; }
+        .entrega-card p { font-size: 0.9rem; color: var(--clr-text-muted); margin: 0; }
+        .center-cta { text-align: center; margin-top: 60px; }
+
+        .depoimentos { background-color: var(--clr-bg-dark); overflow: hidden; }
+        .carousel-container { width: 100%; }
+        .carousel { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 20px 0 40px; scrollbar-width: none; }
+        .carousel::-webkit-scrollbar { display: none; }
+        .carousel img { flex: 0 0 calc(33.333% - 14px); scroll-snap-align: center; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-soft); transition: var(--transition-smooth); }
+        .carousel img:hover { transform: scale(1.02); border-color: rgba(216, 177, 90, 0.3); }
+
+        .investimento { background: radial-gradient(circle at center, var(--clr-primary-purple), var(--clr-bg-dark) 80%); }
+        .investment-intro { text-align: center; max-width: 800px; margin: 0 auto 60px; }
+        .quote-icon { font-size: 2rem; color: var(--clr-gold-dark); margin-bottom: 20px; }
+        .investment-intro p { font-size: 1.15rem; font-style: italic; color: var(--clr-text-muted); }
+        .investment-card { max-width: 750px; margin: 0 auto; padding: 3px; background: linear-gradient(135deg, rgba(216,177,90,0.4), rgba(0,0,0,0)); border-radius: var(--radius-lg); }
+        .card-inner { background: var(--clr-bg-surface); border-radius: calc(var(--radius-lg) - 3px); padding: 60px 50px; text-align: center; }
+        .card-inner h3 { font-size: 2rem; color: var(--clr-white); margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 30px; }
+        .card-inner h3 span { color: var(--clr-gold-base); display: block; }
+        .investment-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; margin-bottom: 40px; }
+        .investment-features li { margin-bottom: 15px; color: var(--clr-text-main); display: flex; align-items: center; gap: 10px; }
+        .investment-features i { color: var(--clr-gold-base); font-size: 0.8rem; }
+        .price-box { margin-bottom: 40px; }
+        .price-label { text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-muted); font-size: 0.9rem; display: block; margin-bottom: 10px; }
+        .price-cash { font-family: var(--font-heading); font-size: 4rem; color: var(--clr-gold-base); line-height: 1; margin-bottom: 10px; }
+        .suffix { font-family: var(--font-body); font-size: 1.2rem; color: var(--clr-text-main); font-weight: 400; }
+        .price-term { font-size: 1.2rem; color: var(--clr-text-muted); }
+        .investment-footer { margin-top: 40px; }
+        .investment-footer p { font-style: italic; font-size: 0.95rem; color: var(--clr-text-muted); margin-bottom: 20px; }
+        .scarcity-badge { display: inline-block; padding: 8px 20px; background: rgba(216, 177, 90, 0.1); border: 1px solid var(--clr-gold-dark); color: var(--clr-gold-base); border-radius: 50px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .faq { background-color: var(--clr-bg-dark); }
+        .accordion { max-width: 800px; margin: 0 auto; }
+        .accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .accordion-header { width: 100%; text-align: left; background: none; border: none; padding: 25px 0; color: var(--clr-white); font-family: var(--font-heading); font-size: 1.3rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition-smooth); }
+        .accordion-header:hover, .accordion-header.active { color: var(--clr-gold-base); }
+        .accordion-header i { font-size: 1rem; transition: transform 0.3s ease; }
+        .accordion-header.active i { transform: rotate(180deg); }
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+        .accordion-content p { padding-bottom: 25px; color: var(--clr-text-muted); }
+
+        .cta-final { background-color: var(--clr-bg-surface); border-top: 1px solid rgba(216,177,90,0.2); }
+        .final-box { max-width: 800px; margin: 0 auto; padding: 60px 40px; text-align: center; }
+        .author-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--clr-gold-base); margin: 0 auto 30px; }
+        .final-dilemma { font-size: 2rem; line-height: 1.4; margin-bottom: 30px; }
+        .final-dilemma span { color: var(--clr-gold-base); font-style: italic; }
+        .final-desc { color: var(--clr-text-muted); font-size: 1.1rem; margin-bottom: 40px; }
+        .final-scarcity { margin-top: 20px; color: var(--clr-gold-dark); font-size: 0.9rem; }
+
+        .footer { background-color: #050208; padding: 60px 0 100px; text-align: center; }
+        .footer-brand { font-family: var(--font-heading); font-size: 1.5rem; color: var(--clr-white); margin-bottom: 20px; }
+        .footer-brand span { color: var(--clr-text-muted); font-family: var(--font-body); font-size: 1rem; }
+        .footer p { color: var(--clr-text-muted); font-size: 0.9rem; margin-bottom: 10px; }
+        .disclaimer { max-width: 600px; margin: 20px auto 0; font-size: 0.8rem !important; opacity: 0.6; }
+
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: var(--shadow-soft); z-index: 1000; transition: var(--transition-smooth); }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+        .sticky-mobile-cta { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(10, 4, 14, 0.95); backdrop-filter: blur(10px); padding: 15px 20px; z-index: 999; border-top: 1px solid rgba(255,255,255,0.05); }
+        .sticky-mobile-cta .cta-button { width: 100%; padding: 15px; font-size: 1rem; }
+
+        .reveal { opacity: 0; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translate(0, 0); }
+        .fade-up { transform: translateY(40px); }
+        .fade-left { transform: translateX(40px); }
+        .fade-right { transform: translateX(-40px); }
+
+        @media (max-width: 1024px) { .timeline { grid-template-columns: 1fr 1fr; gap: 40px; } }
+        @media (max-width: 900px) {
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-texto { order: 1; }
+            .hero-quote { text-align: left; }
+            .hero-features { text-align: left; }
+            .hero-image-wrapper { order: 2; max-width: 500px; margin: 0 auto; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .entregas-grid { grid-template-columns: 1fr; }
+            .mockups { flex-direction: row; overflow-x: auto; }
+            .mockups img { width: 80%; flex-shrink: 0; }
+            .investment-features { grid-template-columns: 1fr; }
+            .carousel img { flex: 0 0 calc(50% - 10px); }
+        }
+        @media (max-width: 600px) {
+            :root { --section-padding-y: 60px; }
+            .hero { padding-top: 100px; }
+            .hero h1 { font-size: 2.2rem; }
+            .cta-button { width: 100%; display: block; padding: 18px 20px; }
+            .timeline { grid-template-columns: 1fr; }
+            .card-inner { padding: 40px 25px; }
+            .price-cash { font-size: 2.8rem; }
+            .carousel img { flex: 0 0 calc(85% - 20px); }
+            .final-box { padding: 40px 20px; }
+            .final-dilemma { font-size: 1.5rem; }
+            .sticky-mobile-cta { display: block; }
+            .floating-whatsapp { bottom: 90px; right: 20px; width: 50px; height: 50px; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">Érika <span>Vida Arquetípica</span></div>
+            <a href="#" class="cta-button-small checkout-btn">Agendar Sessão</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO -->
+        <section id="hero" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal fade-up">
+                    <span class="badge">Atendimento Premium</span>
+                    <h1>Direcionamento <br><span>Arquetípico</span></h1>
+                    <p class="subtitle">Pare de repetir os mesmos padrões e descubra o que realmente está impedindo a sua vida de avançar.</p>
+                    
+                    <div class="hero-quote">
+                        <p>Uma análise profunda que une Mapa Astral, Tarô e Alinhamento Arquetípico Personalizado para revelar a origem dos seus bloqueios e mostrar, com clareza, quais caminhos desenvolver para construir uma vida mais leve, próspera e alinhada.</p>
+                    </div>
+                    
+                    <ul class="hero-features">
+                        <li><i class="fa-solid fa-diamond"></i> Não é uma leitura pronta.</li>
+                        <li><i class="fa-solid fa-diamond"></i> Não é uma interpretação genérica.</li>
+                        <li><i class="fa-solid fa-diamond"></i> É um estudo completamente personalizado, construído a partir da sua história, da sua energia e do seu momento de vida.</li>
+                    </ul>
+                    
+                    <div class="cta-wrapper">
+                        <a href="#" class="cta-button checkout-btn">Quero iniciar minha transformação</a>
+                        <div class="cta-subtext">
+                            <span class="price-hint">Investimento a partir de R$397</span>
+                            <span class="scarcity"><i class="fa-solid fa-lock"></i> Apenas 8 atendimentos são disponibilizados por mês para preservar a profundidade e a qualidade de cada análise.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image-wrapper reveal fade-left">
+                    <div class="image-frame">
+                        <img src="imagem1.jpg" alt="Érika - Direcionamento Arquetípico" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PARA QUEM É -->
+        <section id="para-quem" class="para-quem">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>Alinhamento de <span>Propósito</span></h2>
+                    <p>Entenda se este é o momento exato para a sua jornada.</p>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="premium-card card-green reveal fade-up" style="transition-delay: 0.1s;">
+                        <div class="card-icon"><i class="fa-solid fa-check-double"></i></div>
+                        <h3>Esse atendimento é para você se...</h3>
+                        <ul class="check-list">
+                            <li><i class="fa-solid fa-check"></i> sente que vive repetindo os mesmos ciclos no amor, dinheiro ou carreira;</li>
+                            <li><i class="fa-solid fa-check"></i> percebe que existe um bloqueio, mas nunca consegue identificar sua origem;</li>
+                            <li><i class="fa-solid fa-check"></i> deseja tomar decisões com mais segurança;</li>
+                            <li><i class="fa-solid fa-check"></i> busca compreender sua essência e desenvolver seu potencial;</li>
+                            <li><i class="fa-solid fa-check"></i> quer orientações práticas e personalizadas;</li>
+                            <li><i class="fa-solid fa-check"></i> está pronta para assumir um novo posicionamento diante da própria vida.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="premium-card card-wine reveal fade-up" style="transition-delay: 0.3s;">
+                        <div class="card-icon"><i class="fa-solid fa-xmark"></i></div>
+                        <h3>Talvez este atendimento não seja para você...</h3>
+                        <ul class="cross-list">
+                            <li><i class="fa-solid fa-xmark"></i> procura apenas previsões rápidas;</li>
+                            <li><i class="fa-solid fa-xmark"></i> espera soluções sem participação ativa;</li>
+                            <li><i class="fa-solid fa-xmark"></i> não está aberta ao autoconhecimento e às mudanças que ele exige.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. COMO FUNCIONA -->
+        <section id="como-funciona" class="como-funciona">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>Como funciona o meu <span>método</span></h2>
+                    <p>Um processo estruturado, profundo e totalmente focado em você.</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item reveal fade-right">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content glass-panel">
+                            <h4>Você compartilha sua história.</h4>
+                            <p>Por meio de um formulário detalhado, compreendo seus desafios, objetivos, padrões repetitivos e tudo aquilo que deseja transformar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item reveal fade-left">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content glass-panel">
+                            <h4>Análise completa do Mapa Astral.</h4>
+                            <p>Cruzo cada informação da sua história com o seu mapa para identificar talentos, potencialidades e as raízes dos bloqueios.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item reveal fade-right">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-content glass-panel">
+                            <h4>Direcionamento através do Tarô.</h4>
+                            <p>Realizo uma tiragem personalizada para confirmar os padrões encontrados, compreender o momento atual e apontar possibilidades de desenvolvimento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item reveal fade-left">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-content glass-panel">
+                            <h4>Plano personalizado de transformação.</h4>
+                            <p>Você recebe uma entrega completa com explicações detalhadas, materiais exclusivos e orientações práticas para aplicar imediatamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. O QUE VOCÊ RECEBE -->
+        <section id="entregas" class="entregas">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>O que você <span>recebe</span></h2>
+                    <p>Um material luxuoso, profundo e vitalício para guiar seus próximos passos.</p>
+                </div>
+                
+                <div class="entregas-grid">
+                    <div class="mockups reveal fade-up">
+                        <img src="imagem2.jpg" alt="Material do Direcionamento" class="mockup-img" loading="lazy">
+                        <img src="imagem3.jpg" alt="Telinhas Arquetípicas" class="mockup-img" loading="lazy">
+                    </div>
+                    
+                    <div class="entregas-list">
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.1s">
+                            <i class="fa-solid fa-book-open"></i>
+                            <div>
+                                <h4>Análise Personalizada</h4>
+                                <p>Da sua história e momento atual.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.15s">
+                            <i class="fa-solid fa-moon"></i>
+                            <div>
+                                <h4>Mapa Astral Interpretado</h4>
+                                <p>Focado em raízes e potenciais.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.2s">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <div>
+                                <h4>Tiragem Exclusiva de Tarô</h4>
+                                <p>Para clareza e confirmação.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.25s">
+                            <i class="fa-solid fa-headphones"></i>
+                            <div>
+                                <h4>Áudios Explicativos</h4>
+                                <p>Para ouvir e reouvir sempre.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.3s">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <div>
+                                <h4>PDF de Alinhamento</h4>
+                                <p>Arquetípico documentado.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.35s">
+                            <i class="fa-solid fa-anchor"></i>
+                            <div>
+                                <h4>Guia de Ancoramento</h4>
+                                <p>Práticas e exercícios diários.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.4s">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            <div>
+                                <h4>Telinha Personalizada</h4>
+                                <p>O arquétipo no seu celular.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.45s">
+                            <i class="fa-solid fa-scroll"></i>
+                            <div>
+                                <h4>Decreto Exclusivo</h4>
+                                <p>Mantras de ativação.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.5s">
+                            <i class="fa-solid fa-spa"></i>
+                            <div>
+                                <h4>Prática de Ho'oponopono</h4>
+                                <p>Limpeza de memórias.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.55s">
+                            <i class="fa-regular fa-image"></i>
+                            <div>
+                                <h4>Imagens dos Arquétipos</h4>
+                                <p>Para visualização potente.</p>
+                            </div>
+                        </div>
+                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.6s">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <div>
+                                <h4>Plano de Aplicação</h4>
+                                <p>Para os primeiros sete dias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-cta reveal fade-up">
+                    <a href="#" class="cta-button checkout-btn">Quero reservar minha vaga</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. DEPOIMENTOS -->
+        <section id="depoimentos" class="depoimentos">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>Mais de mil consulentes já passaram por esse <span>processo de transformação.</span></h2>
+                </div>
+                
+                <div class="carousel-container reveal fade-up">
+                    <div class="carousel">
+                        <img src="imagem4.png" alt="Depoimento 1" loading="lazy">
+                        <img src="imagem5.png" alt="Depoimento 2" loading="lazy">
+                        <img src="imagem6.png" alt="Depoimento 3" loading="lazy">
+                        <img src="imagem7.png" alt="Depoimento 4" loading="lazy">
+                        <img src="imagem8.png" alt="Depoimento 5" loading="lazy">
+                        <img src="imagem9.png" alt="Depoimento 6" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. INVESTIMENTO -->
+        <section id="investimento" class="investimento">
+            <div class="container">
+                <div class="investment-intro reveal fade-up">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>Cada atendimento é desenvolvido individualmente.<br>Durante vários dias analiso cuidadosamente sua história, seu mapa astral, realizo a tiragem personalizada do Tarô e elaboro materiais exclusivos para que você tenha um direcionamento completo, claro e aplicável.<br><br>Por isso, atendo um número limitado de pessoas por mês.</p>
+                </div>
+                
+                <div class="investment-card glass-panel reveal fade-up">
+                    <div class="card-inner">
+                        <h3>Direcionamento Arquetípico <span>Completo</span></h3>
+                        
+                        <div class="investment-features">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i> Mapa Astral</li>
+                                <li><i class="fa-solid fa-star"></i> Tarô Personalizado</li>
+                                <li><i class="fa-solid fa-star"></i> Áudios exclusivos</li>
+                            </ul>
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i> PDFs personalizados</li>
+                                <li><i class="fa-solid fa-star"></i> Plano de ação</li>
+                                <li><i class="fa-solid fa-star"></i> Materiais complementares</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="price-box">
+                            <span class="price-label">Investimento</span>
+                            <div class="price-cash">R$397 <span class="suffix">à vista</span></div>
+                            <div class="price-term">ou 10x de R$43,70</div>
+                        </div>
+                        
+                        <a href="#" class="cta-button checkout-btn">Garantir Meu Atendimento</a>
+                        
+                        <div class="investment-footer">
+                            <p>Mais do que uma consulta, este é um processo personalizado de autoconhecimento e direcionamento, construído exclusivamente para você.</p>
+                            <div class="scarcity-badge"><i class="fa-solid fa-gem"></i> Somente 8 vagas disponíveis por mês</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. PERGUNTAS FREQUENTES -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <h2>Perguntas <span>Frequentes</span></h2>
+                </div>
+                
+                <div class="accordion reveal fade-up">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Como funciona o atendimento? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Após a confirmação do pagamento, você preencherá um formulário detalhado. Com base nisso, farei o cruzamento do seu Mapa Astral e a tiragem de Tarô, criando todo o material personalizado que será entregue a você no prazo combinado.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Preciso entender de Tarô? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Não. Toda a linguagem utilizada no material é clara, acessível e focada na aplicação prática para a sua vida, sem jargões complexos.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Quando recebo o material? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Como cada direcionamento é único e construído do zero, o prazo de entrega será informado individualmente logo após a confirmação da sua vaga, garantindo a excelência do processo.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Posso direcionar para qualquer área da minha vida? <i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="accordion-content">
+                            <p>Sim! No formulário inicial, você indicará qual área deseja focar (relacionamentos, carreira, finanças, desenvolvimento pessoal, etc.), e toda a análise será aprofundada nesse tema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CTA FINAL -->
+        <section id="cta-final" class="cta-final">
+            <div class="container">
+                <div class="final-box glass-panel reveal fade-up">
+                    <img src="imagem1.jpg" alt="Érika" class="author-img" loading="lazy">
+                    
+                    <h2 class="final-dilemma">
+                        Você pode continuar convivendo com os mesmos padrões...<br>
+                        <span>...ou escolher compreender a origem deles e iniciar uma transformação consciente.</span>
+                    </h2>
+                    
+                    <p class="final-desc">O primeiro passo começa quando você decide olhar para sua história com profundidade.<br>Se este é o seu momento, será um prazer caminhar com você nesse processo.</p>
+                    
+                    <a href="#" class="cta-button checkout-btn">Quero iniciar meu Direcionamento Arquetípico</a>
+                    
+                    <p class="final-scarcity"><i class="fa-solid fa-lock"></i> Apenas 8 atendimentos são disponibilizados por mês.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">Érika <span>| Vida Arquetípica</span></div>
+                <p>&copy; 2026 Todos os direitos reservados.</p>
+                <p class="disclaimer">Este atendimento tem finalidade de autoconhecimento e desenvolvimento pessoal. Não substitui acompanhamento médico, psicológico ou psiquiátrico.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="floating-whatsapp checkout-btn" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    
+    <div class="sticky-mobile-cta">
+        <a href="#" class="cta-button checkout-btn">Agendar Sessão</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const KIWIFY_LINK = "https://pay.kiwify.com.br/2Ar7zHl";
+            
+            const checkoutButtons = document.querySelectorAll('.checkout-btn');
+            checkoutButtons.forEach(btn => {
+                btn.href = KIWIFY_LINK;
+                btn.target = "_blank";
+                btn.rel = "noopener noreferrer";
+            });
+
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+            
+            revealElements.forEach(el => revealOnScroll.observe(el));
+
+            const accordions = document.querySelectorAll('.accordion-header');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
