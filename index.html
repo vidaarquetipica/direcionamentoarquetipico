@@ -68,7 +68,6 @@
 
         .hero { padding-top: 150px; min-height: 100vh; display: flex; align-items: center; background: radial-gradient(circle at 80% 20%, var(--clr-primary-purple), var(--clr-bg-dark) 60%); }
         .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
-        .badge { display: inline-block; padding: 6px 16px; border: 1px solid var(--clr-gold-dark); color: var(--clr-gold-light); border-radius: 50px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
         .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 20px; }
         .hero h1 span { color: var(--clr-gold-base); font-style: italic; }
         .subtitle { font-size: 1.25rem; color: var(--clr-text-muted); margin-bottom: 30px; }
@@ -79,11 +78,11 @@
         .hero-features i { color: var(--clr-gold-base); font-size: 0.7rem; margin-top: 6px; }
         .cta-wrapper { display: flex; flex-direction: column; gap: 15px; }
         .cta-subtext { display: flex; flex-direction: column; gap: 5px; }
-        .price-hint { font-size: 0.9rem; color: var(--clr-text-muted); }
         .scarcity { font-size: 0.85rem; color: var(--clr-gold-dark); }
-        .image-frame { position: relative; padding: 15px; }
-        .image-frame::before { content: ''; position: absolute; top: 0; left: 0; right: 30px; bottom: 30px; border: 1px solid var(--clr-gold-base); border-radius: 4px; z-index: 1; }
-        .image-frame img { position: relative; z-index: 2; border-radius: 4px; box-shadow: var(--shadow-soft); transform: translate(15px, 15px); }
+        
+        /* Moldura ajustada e alinhada */
+        .image-frame { position: relative; width: 100%; max-width: 450px; margin: 0 auto; border: 1px solid var(--clr-gold-base); border-radius: 8px; padding: 10px; box-shadow: var(--shadow-soft); background: var(--clr-bg-surface); }
+        .image-frame img { width: 100%; height: auto; border-radius: 4px; display: block; }
 
         .para-quem { background-color: var(--clr-bg-surface); }
         .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
@@ -228,7 +227,6 @@
         <section id="hero" class="hero">
             <div class="container hero-grid">
                 <div class="hero-content reveal fade-up">
-                    <span class="badge">Atendimento Premium</span>
                     <h1>Direcionamento <br><span>Arquetípico</span></h1>
                     <p class="subtitle">Pare de repetir os mesmos padrões e descubra o que realmente está impedindo a sua vida de avançar.</p>
                     
@@ -245,7 +243,6 @@
                     <div class="cta-wrapper">
                         <a href="#" class="cta-button checkout-btn">Quero iniciar minha transformação</a>
                         <div class="cta-subtext">
-                            <span class="price-hint">Investimento a partir de R$397</span>
                             <span class="scarcity"><i class="fa-solid fa-lock"></i> Apenas 8 atendimentos são disponibilizados por mês para preservar a profundidade e a qualidade de cada análise.</span>
                         </div>
                     </div>
@@ -253,7 +250,7 @@
                 
                 <div class="hero-image-wrapper reveal fade-left">
                     <div class="image-frame">
-                        <img src="Imagem%201%20.png" alt="Érika - Direcionamento Arquetípico" loading="lazy">
+                        <img src="imagem-2.jpg" alt="Érika - Direcionamento Arquetípico" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -343,7 +340,7 @@
             <div class="container">
                 <div class="section-header reveal fade-up">
                     <h2>O que você <span>recebe</span></h2>
-                    <p>Um material luxuoso, profundo e vitalício para guiar seus próximos passos.</p>
+                    <p>Um material completo, detalhado e vitalício para guiar seus próximos passos.</p>
                 </div>
                 
                 <div class="entregas-grid">
@@ -486,8 +483,8 @@
                         
                         <div class="price-box">
                             <span class="price-label">Investimento</span>
-                            <div class="price-cash">R$397 <span class="suffix">à vista</span></div>
-                            <div class="price-term">ou 10x de R$43,70</div>
+                            <div class="price-cash">R$347,00 <span class="suffix">à vista</span></div>
+                            <div class="price-term">ou 10x de R$ 34,70</div>
                         </div>
                         
                         <a href="#" class="cta-button checkout-btn">Garantir Meu Atendimento</a>
@@ -524,7 +521,7 @@
                     <div class="accordion-item">
                         <button class="accordion-header">Quando recebo o material? <i class="fa-solid fa-chevron-down"></i></button>
                         <div class="accordion-content">
-                            <p>Como cada direcionamento é único e construído do zero, o prazo de entrega será informado individualmente logo após a confirmação da sua vaga, garantindo a excelência do processo.</p>
+                            <p>Você recebe o material completo dentro do prazo de até 7 dias, pelo seu WhatsApp ou e-mail.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -541,7 +538,7 @@
         <section id="cta-final" class="cta-final">
             <div class="container">
                 <div class="final-box glass-panel reveal fade-up">
-                    <img src="Imagem%201%20.png" alt="Érika" class="author-img" loading="lazy">
+                    <img src="imagem-2.jpg" alt="Érika" class="author-img" loading="lazy">
                     
                     <h2 class="final-dilemma">
                         Você pode continuar convivendo com os mesmos padrões...<br>
