@@ -3,764 +3,1631 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Direcionamento Arquetípico Completo com Mapa Astral ✨</title>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>Direcionamento Arquetípico Completo com Mapa Astral ✦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <style>
   :root {
-    --verde-musgo: #5B7553;
-    --verde-claro: #8BA888;
-    --verde-agua: #D4DED0;
-    --dourado: #C9A961;
-    --dourado-claro: #E8D5A3;
-    --roxo: #9B8AA3;
+    /* Paleta Premium Refinada */
+    --verde-musgo: #4E6B47;
+    --verde-musgo-profundo: #3D5438;
+    --verde-claro: #A8B8A0;
+    --verde-agua: #E8EDE4;
+    --dourado: #C8A25A;
+    --dourado-claro: #E4CF9E;
+    --dourado-palido: #F3E9D0;
+    --roxo: #8A7A96;
+    --roxo-profundo: #6F5F7B;
     --roxo-claro: #C9BFD1;
+    --roxo-palido: #EDE8F1;
     --fundo: #FBFAF7;
-    --texto: #3A3A3A;
-    --texto-claro: #6B6B6B;
-    --borda: #E8E4DC;
+    --fundo-2: #F7F5F0;
+    --texto: #2E2E2E;
+    --texto-claro: #5C5C5C;
+    --texto-suave: #7A7A7A;
+    --borda: #E5DFD3;
+    --sombra-suave: 0 4px 24px rgba(78, 107, 71, 0.06);
+    --sombra-elegante: 0 12px 40px rgba(78, 107, 71, 0.12);
+    --sombra-dourada: 0 8px 32px rgba(200, 162, 90, 0.2);
   }
+
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  
   body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
     background: var(--fundo);
     color: var(--texto);
-    line-height: 1.7;
+    line-height: 1.75;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3 {
+
+  h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
-    color: var(--verde-musgo);
+    color: var(--verde-musgo-profundo);
     line-height: 1.2;
     letter-spacing: -0.01em;
+    font-weight: 500;
   }
-  .dourado { color: var(--dourado); }
-  .roxo { color: var(--roxo); }
 
-  /* Barra fixa superior */
+  .dourado { 
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 50%, var(--dourado) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+  }
+  .roxo { color: var(--roxo-profundo); }
+  .italico { font-style: italic; }
+
+  /* ============================================
+     BARRA FIXA SUPERIOR PREMIUM
+     ============================================ */
   .barra-fixa {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(251, 250, 247, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--borda);
-    padding: 12px 24px;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(251, 250, 247, 0.92);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(200, 162, 90, 0.15);
+    padding: 14px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.4s ease;
   }
+
   .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--verde-musgo);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--verde-musgo-profundo);
+    letter-spacing: 0.02em;
   }
-  .btn-principal {
-    display: inline-block;
-    background: var(--verde-musgo);
+
+  .logo-estrela {
+    width: 22px;
+    height: 22px;
+    color: var(--dourado);
+    filter: drop-shadow(0 1px 3px rgba(200, 162, 90, 0.4));
+  }
+
+  /* Botão Premium */
+  .btn-premium {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--verde-musgo) 0%, var(--verde-musgo-profundo) 100%);
     color: #fff;
-    padding: 12px 28px;
+    padding: 13px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
-    transition: all 0.3s ease;
+    letter-spacing: 0.01em;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(91, 117, 83, 0.25);
+    box-shadow: 0 6px 20px rgba(78, 107, 71, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
   }
-  .btn-principal:hover {
-    background: #4A6243;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(91, 117, 83, 0.35);
+
+  .btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transition: left 0.6s ease;
   }
+
+  .btn-premium:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(78, 107, 71, 0.4);
+  }
+
+  .btn-premium:hover::before { left: 100%; }
+
   .btn-dourado {
-    background: var(--dourado);
-    box-shadow: 0 4px 14px rgba(201, 169, 97, 0.3);
+    background: linear-gradient(135deg, var(--dourado) 0%, #D4B06A 50%, var(--dourado) 100%);
+    color: #3D2E14;
+    box-shadow: var(--sombra-dourada);
+    background-size: 200% auto;
   }
+
   .btn-dourado:hover {
-    background: #B89850;
-    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+    background-position: right center;
+    box-shadow: 0 12px 36px rgba(200, 162, 90, 0.35);
+    transform: translateY(-3px);
   }
 
-  /* Hero */
+  .btn-dourado svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .btn-dourado:hover svg { transform: translateX(4px); }
+
+  /* ============================================
+     HERO PREMIUM
+     ============================================ */
   .hero {
-    padding: 140px 24px 80px;
+    position: relative;
+    padding: 160px 24px 100px;
     text-align: center;
-    max-width: 900px;
+    max-width: 980px;
     margin: 0 auto;
-    background: 
-      radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.08), transparent 50%),
-      radial-gradient(circle at 80% 70%, rgba(155, 138, 163, 0.1), transparent 50%);
-  }
-  .hero h1 {
-    font-size: clamp(32px, 5vw, 52px);
-    margin-bottom: 24px;
-    font-weight: 600;
-  }
-  .hero p {
-    font-size: clamp(17px, 2.2vw, 20px);
-    color: var(--texto-claro);
-    max-width: 720px;
-    margin: 0 auto 40px;
-    font-weight: 300;
-  }
-  .divisoria {
-    width: 80px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--dourado), transparent);
-    margin: 40px auto;
+    overflow: hidden;
   }
 
-  /* Seções */
-  .secao {
-    padding: 80px 24px;
-    max-width: 1000px;
-    margin: 0 auto;
+  .hero::before, .hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
   }
+
+  .hero::before {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--dourado-palido), transparent 70%);
+    top: -100px; left: -100px;
+  }
+
+  .hero::after {
+    width: 450px; height: 450px;
+    background: radial-gradient(circle, var(--roxo-palido), transparent 70%);
+    bottom: -80px; right: -80px;
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 28px;
+    padding: 8px 20px;
+    border: 1px solid rgba(200, 162, 90, 0.3);
+    border-radius: 50px;
+    background: rgba(200, 162, 90, 0.06);
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 5.5vw, 60px);
+    margin-bottom: 28px;
+    font-weight: 500;
+    color: var(--verde-musgo-profundo);
+  }
+
+  .hero h1 .dourado { font-weight: 600; }
+
+  .hero p {
+    font-size: clamp(18px, 2.3vw, 21px);
+    color: var(--texto-claro);
+    max-width: 760px;
+    margin: 0 auto 44px;
+    font-weight: 300;
+    line-height: 1.8;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+  }
+
+  .divisoria-ornamental {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 52px auto;
+    max-width: 400px;
+  }
+
+  .divisoria-ornamental .linha {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dourado-claro), transparent);
+  }
+
+  .divisoria-ornamental svg {
+    width: 20px;
+    height: 20px;
+    color: var(--dourado);
+    flex-shrink: 0;
+  }
+
+  /* ============================================
+     SEÇÕES BASE
+     ============================================ */
+  .secao {
+    padding: 100px 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+  }
+
   .secao h2 {
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(30px, 4.2vw, 44px);
     text-align: center;
     margin-bottom: 16px;
+    color: var(--verde-musgo-profundo);
   }
+
   .subtitulo {
     text-align: center;
     color: var(--texto-claro);
     font-size: 17px;
-    max-width: 700px;
-    margin: 0 auto 56px;
+    max-width: 740px;
+    margin: 0 auto 64px;
+    font-weight: 400;
+    line-height: 1.7;
   }
+
   .secao-clara {
-    background: #fff;
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--fundo-2) 100%);
     border-top: 1px solid var(--borda);
     border-bottom: 1px solid var(--borda);
   }
+
   .secao-roxa {
-    background: linear-gradient(180deg, #F7F4F9 0%, #FBFAF7 100%);
+    background: linear-gradient(180deg, #FAF8FC 0%, var(--fundo) 100%);
   }
 
-  /* Imagem principal */
+  .titulo-dourado {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--dourado);
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  /* ============================================
+     IMAGEM PRINCIPAL
+     ============================================ */
+  .imagem-principal-wrap {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .imagem-principal-wrap::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border: 1px solid var(--dourado-claro);
+    border-radius: 20px;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .imagem-principal-wrap::after {
+    content: '';
+    position: absolute;
+    inset: -24px;
+    border: 1px solid rgba(200, 162, 90, 0.25);
+    border-radius: 24px;
+    pointer-events: none;
+  }
+
   .imagem-principal {
     width: 100%;
-    max-width: 700px;
     border-radius: 16px;
     display: block;
-    margin: 0 auto;
-    box-shadow: 0 20px 60px rgba(91, 117, 83, 0.15);
+    box-shadow: var(--sombra-elegante);
+    position: relative;
+    z-index: 2;
   }
 
-  /* Lista para quem é */
+  /* ============================================
+     PARA QUEM É — CARDS PREMIUM
+     ============================================ */
   .lista-quadros {
     display: grid;
-    gap: 16px;
-    max-width: 780px;
+    gap: 18px;
+    max-width: 820px;
     margin: 0 auto;
   }
+
   .item-lista {
     background: #fff;
-    padding: 20px 24px;
-    border-radius: 12px;
+    padding: 24px 28px;
+    border-radius: 14px;
     border-left: 3px solid var(--dourado);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: var(--sombra-suave);
     font-size: 16px;
     display: flex;
-    gap: 14px;
+    gap: 18px;
     align-items: flex-start;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
   }
-  .marcador {
-    color: var(--verde-musgo);
-    font-weight: 700;
-    font-size: 18px;
+
+  .item-lista:hover {
+    transform: translateX(6px);
+    border-color: rgba(200, 162, 90, 0.2);
+    box-shadow: 0 8px 32px rgba(78, 107, 71, 0.1);
+  }
+
+  .item-lista svg {
+    width: 22px;
+    height: 22px;
+    color: var(--dourado);
     flex-shrink: 0;
     margin-top: 2px;
+    filter: drop-shadow(0 1px 2px rgba(200, 162, 90, 0.3));
   }
 
-  /* Texto central */
+  .item-lista span {
+    color: var(--texto);
+    line-height: 1.65;
+  }
+
+  /* Texto destaque elegante */
   .texto-destaque {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(22px, 3vw, 28px);
+    font-size: clamp(24px, 3.2vw, 32px);
     text-align: center;
-    color: var(--verde-musgo);
-    max-width: 780px;
+    color: var(--verde-musgo-profundo);
+    max-width: 820px;
     margin: 0 auto;
-    line-height: 1.4;
-    font-weight: 500;
+    line-height: 1.45;
+    font-weight: 400;
+    font-style: italic;
+    position: relative;
+    padding: 0 20px;
   }
 
-  /* Depoimentos */
+  .texto-destaque::before, .texto-destaque::after {
+    content: '"';
+    font-size: 60px;
+    color: var(--dourado-claro);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 0;
+    position: relative;
+    top: 18px;
+    opacity: 0.7;
+  }
+
+  .texto-destaque::before { margin-right: 8px; }
+  .texto-destaque::after { margin-left: 8px; }
+
+  /* ============================================
+     DEPOIMENTOS GALERIA PREMIUM
+     ============================================ */
   .grid-depoimentos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
   }
+
   .depoimento {
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    transition: transform 0.3s ease;
+    box-shadow: var(--sombra-suave);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     background: #fff;
+    position: relative;
+    border: 1px solid var(--borda);
   }
-  .depoimento:hover { transform: translateY(-4px); }
+
+  .depoimento::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .depoimento:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-elegante);
+  }
+
+  .depoimento:hover::before {
+    border-color: rgba(200, 162, 90, 0.4);
+  }
+
   .depoimento img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.6s ease;
   }
 
-  /* O que recebe */
+  .depoimento:hover img { transform: scale(1.02); }
+
+  /* ============================================
+     O QUE VOCÊ RECEBE — ÍCONES SVG PREMIUM
+     ============================================ */
   .grid-beneficios {
     display: grid;
-    gap: 20px;
-    max-width: 880px;
+    gap: 22px;
+    max-width: 920px;
     margin: 0 auto;
   }
+
   .beneficio {
     background: #fff;
-    padding: 24px 28px;
-    border-radius: 14px;
+    padding: 28px 32px;
+    border-radius: 16px;
     border: 1px solid var(--borda);
-    transition: all 0.3s ease;
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
   }
+
+  .beneficio::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--dourado), var(--roxo-claro), var(--verde-claro));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+
   .beneficio:hover {
-    border-color: var(--verde-claro);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(91, 117, 83, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba(200, 162, 90, 0.3);
+    box-shadow: var(--sombra-elegante);
   }
-  .beneficio-titulo {
+
+  .beneficio:hover::before { transform: scaleX(1); }
+
+  .beneficio-cabecalho {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-    font-weight: 700;
-    color: var(--verde-musgo);
-    font-size: 17px;
+    gap: 18px;
+    margin-bottom: 14px;
   }
-  .icone {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--verde-agua);
+
+  .icone-premium {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--verde-musgo);
     flex-shrink: 0;
-    font-size: 16px;
+    transition: all 0.4s ease;
   }
+
+  .icone-verde {
+    background: linear-gradient(135deg, var(--verde-agua), #D4DED0);
+    color: var(--verde-musgo-profundo);
+  }
+
+  .icone-dourado {
+    background: linear-gradient(135deg, var(--dourado-palido), var(--dourado-claro));
+    color: #8B6E30;
+    box-shadow: 0 4px 12px rgba(200, 162, 90, 0.2);
+  }
+
+  .icone-roxo {
+    background: linear-gradient(135deg, var(--roxo-palido), var(--roxo-claro));
+    color: var(--roxo-profundo);
+  }
+
+  .beneficio:hover .icone-premium {
+    transform: scale(1.08) rotate(-3deg);
+  }
+
+  .icone-premium svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.8;
+  }
+
+  .beneficio-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--verde-musgo-profundo);
+    letter-spacing: 0.005em;
+  }
+
   .beneficio p {
     margin: 0;
     color: var(--texto-claro);
-    font-size: 15px;
-    padding-left: 48px;
+    font-size: 15.5px;
+    line-height: 1.75;
+    padding-left: 70px;
   }
 
-  /* Galeria */
+  /* ============================================
+     GALERIA DE MATERIAIS
+     ============================================ */
   .grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
   }
+
   .galeria-item {
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 14px rgba(155, 138, 163, 0.12);
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    transition: all 0.5s ease;
+    border: 1px solid var(--borda);
   }
+
+  .galeria-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(78, 107, 71, 0.15) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  .galeria-item:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: var(--sombra-elegante);
+  }
+
+  .galeria-item:hover::after { opacity: 1; }
+
   .galeria-item img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.7s ease;
   }
-  .galeria-item:hover img { transform: scale(1.03); }
 
-  /* Como funciona */
+  .galeria-item:hover img { transform: scale(1.06); }
+
+  /* ============================================
+     PASSOS — COMO FUNCIONA
+     ============================================ */
   .passos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+    max-width: 960px;
     margin: 0 auto;
+    position: relative;
   }
+
   .passo {
     text-align: center;
-    padding: 32px 20px;
+    padding: 40px 28px 32px;
     background: #fff;
-    border-radius: 16px;
+    border-radius: 18px;
     position: relative;
     border: 1px solid var(--borda);
+    box-shadow: var(--sombra-suave);
+    transition: all 0.45s ease;
   }
+
+  .passo:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-elegante);
+    border-color: rgba(138, 122, 150, 0.3);
+  }
+
   .numero-passo {
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--dourado), var(--dourado-claro));
+    background: linear-gradient(135deg, var(--dourado) 0%, var(--dourado-claro) 100%);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    margin: 0 auto 16px;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0 auto 22px;
     font-family: 'Cormorant Garamond', serif;
-  }
-  .passo h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: var(--roxo);
-  }
-  .passo p {
-    color: var(--texto-claro);
-    font-size: 15px;
-    margin: 0;
+    box-shadow: var(--sombra-dourada);
+    position: relative;
   }
 
-  /* Investimento */
+  .numero-passo::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 1px solid var(--dourado-claro);
+    opacity: 0.5;
+  }
+
+  .passo h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: var(--roxo-profundo);
+    font-weight: 600;
+  }
+
+  .passo p {
+    color: var(--texto-claro);
+    font-size: 15.5px;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  /* ============================================
+     CARD DE INVESTIMENTO PREMIUM
+     ============================================ */
   .card-investimento {
-    max-width: 560px;
+    max-width: 600px;
     margin: 0 auto;
-    background: linear-gradient(145deg, #fff 0%, #F7F4F9 100%);
-    border: 1px solid var(--borda);
-    border-radius: 20px;
-    padding: 48px 32px;
+    background: linear-gradient(145deg, #FFFFFF 0%, #FBF9F3 50%, #FAF8FC 100%);
+    border: 1px solid rgba(200, 162, 90, 0.25);
+    border-radius: 24px;
+    padding: 56px 40px 48px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(91, 117, 83, 0.1);
+    box-shadow: 
+      0 30px 80px rgba(78, 107, 71, 0.15),
+      inset 0 1px 0 rgba(255,255,255,0.8);
     position: relative;
     overflow: hidden;
   }
+
   .card-investimento::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--verde-musgo), var(--dourado), var(--roxo));
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, 
+      var(--verde-musgo) 0%, 
+      var(--dourado) 35%, 
+      var(--roxo) 70%, 
+      var(--dourado) 100%);
+    background-size: 300% 100%;
+    animation: gradiente-mover 6s ease infinite;
   }
+
+  @keyframes gradiente-mover {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .card-ornamento {
+    position: absolute;
+    top: 24px; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.6;
+  }
+
+  .card-ornamento .linha {
+    width: 60px;
+    height: 1px;
+    background: var(--dourado-claro);
+  }
+
+  .card-ornamento svg {
+    width: 16px;
+    height: 16px;
+    color: var(--dourado);
+  }
+
   .vagas {
-    display: inline-block;
-    background: rgba(201, 169, 97, 0.15);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(200, 162, 90, 0.12), rgba(200, 162, 90, 0.05));
     color: #8B6E30;
-    padding: 8px 20px;
+    padding: 10px 22px;
     border-radius: 50px;
     font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+    border: 1px solid rgba(200, 162, 90, 0.25);
+    margin-top: 8px;
+  }
+
+  .vagas svg {
+    width: 16px;
+    height: 16px;
+    animation: pulsar 2s ease-in-out infinite;
+  }
+
+  @keyframes pulsar {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.15); opacity: 0.8; }
+  }
+
+  .investimento-label {
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
   }
+
   .preco-de {
-    color: var(--texto-claro);
+    color: var(--texto-suave);
     text-decoration: line-through;
-    font-size: 18px;
-    margin-bottom: 4px;
+    font-size: 19px;
+    margin-bottom: 6px;
+    font-weight: 400;
   }
+
   .preco-por {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
-    font-weight: 600;
-    color: var(--verde-musgo);
-    line-height: 1;
-    margin: 8px 0;
-  }
-  .preco-parcelado {
-    color: var(--roxo);
-    font-size: 17px;
+    font-size: 68px;
     font-weight: 500;
-    margin-bottom: 32px;
-  }
-  .card-investimento .btn-principal {
-    font-size: 17px;
-    padding: 16px 48px;
+    background: linear-gradient(135deg, var(--verde-musgo-profundo) 0%, var(--verde-musgo) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin: 10px 0;
+    letter-spacing: -0.02em;
   }
 
-  /* Propósito */
-  .proposito {
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 40px;
-    border-left: 3px solid var(--roxo);
-    border-right: 3px solid var(--roxo);
-    border-radius: 4px;
-  }
-  .proposito p {
+  .preco-parcelado {
+    color: var(--roxo-profundo);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    line-height: 1.5;
-    color: var(--texto);
-    margin: 0;
+    font-style: italic;
   }
 
-  /* FAQ */
-  .faq {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  .faq-item {
-    background: #fff;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    border: 1px solid var(--borda);
-    overflow: hidden;
-  }
-  .faq-pergunta {
-    width: 100%;
-    text-align: left;
-    padding: 20px 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'Nunito', sans-serif;
-    font-size: 16px;
+  .card-investimento .btn-premium {
+    font-size: 17px;
+    padding: 17px 56px;
     font-weight: 600;
-    color: var(--verde-musgo);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background 0.2s;
-  }
-  .faq-pergunta:hover { background: #FAF9F5; }
-  .faq-seta {
-    color: var(--dourado);
-    font-size: 20px;
-    transition: transform 0.3s;
-  }
-  .faq-item.ativo .faq-seta { transform: rotate(180deg); }
-  .faq-resposta {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
-    padding: 0 24px;
-    color: var(--texto-claro);
-    font-size: 15px;
-  }
-  .faq-item.ativo .faq-resposta {
-    max-height: 300px;
-    padding: 0 24px 24px;
   }
 
-  /* WhatsApp flutuante */
-  .whatsapp-flutuante {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 99;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
+  .pagamento-seguro {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
+    gap: 8px;
+    margin-top: 28px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .pagamento-seguro svg {
+    width: 16px;
+    height: 16px;
+    color: var(--verde-musgo);
+  }
+
+  /* ============================================
+     PROPÓSITO
+     ============================================ */
+  .proposito {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 52px 44px;
+    position: relative;
+    border-radius: 4px;
+  }
+
+  .proposito::before, .proposito::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--roxo-claro);
+  }
+
+  .proposito::before {
+    top: 0; left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .proposito::after {
+    bottom: 0; right: 0;
+    border-left: none;
+    border-top: none;
+  }
+
+  .proposito p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.55;
+    color: var(--texto);
+    margin: 0;
+    font-weight: 400;
+  }
+
+  .proposito p .destaque {
+    color: var(--roxo-profundo);
+    font-weight: 500;
+  }
+
+  /* ============================================
+     FAQ PREMIUM
+     ============================================ */
+  .faq {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background: #fff;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    border: 1px solid var(--borda);
+    overflow: hidden;
+    transition: all 0.35s ease;
+    box-shadow: var(--sombra-suave);
+  }
+
+  .faq-item:hover {
+    border-color: rgba(200, 162, 90, 0.3);
+  }
+
+  .faq-item.ativo {
+    border-color: var(--dourado-claro);
+    box-shadow: var(--sombra-elegante);
+  }
+
+  .faq-pergunta {
+    width: 100%;
+    text-align: left;
+    padding: 24px 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--verde-musgo-profundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: background 0.25s ease;
+  }
+
+  .faq-pergunta:hover { background: rgba(200, 162, 90, 0.03); }
+
+  .faq-seta {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--dourado-palido);
+    color: var(--dourado);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .faq-item.ativo .faq-seta {
+    background: var(--dourado);
+    color: #fff;
+    transform: rotate(180deg);
+  }
+
+  .faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 28px;
+    color: var(--texto-claro);
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .faq-item.ativo .faq-resposta {
+    max-height: 400px;
+    padding: 0 28px 28px;
+  }
+
+  /* ============================================
+     CTA FINAL
+     ============================================ */
+  .cta-final {
+    text-align: center;
+    padding: 80px 24px;
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .cta-final h2 {
+    font-size: clamp(32px, 4.5vw, 48px);
+    margin-bottom: 20px;
+  }
+
+  .cta-final .btn-premium {
+    font-size: 18px;
+    padding: 18px 64px;
+    margin-top: 12px;
+  }
+
+  /* ============================================
+     WHATSAPP FLUTUANTE PREMIUM
+     ============================================ */
+  .whatsapp-flutuante {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+      0 8px 28px rgba(37, 211, 102, 0.45),
+      0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
   }
-  .whatsapp-flutuante:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
-  }
-  .whatsapp-flutuante svg { width: 30px; height: 30px; fill: #fff; }
 
-  /* Footer */
+  .whatsapp-flutuante::before {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid rgba(37, 211, 102, 0.4);
+    animation: onda-whats 2.2s ease-out infinite;
+  }
+
+  .whatsapp-flutuante::after {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    animation: onda-whats 2.2s ease-out infinite 0.6s;
+  }
+
+  @keyframes onda-whats {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.4); opacity: 0; }
+  }
+
+  .whatsapp-flutuante:hover {
+    transform: scale(1.12);
+    box-shadow: 
+      0 12px 36px rgba(37, 211, 102, 0.55),
+      0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .whatsapp-flutuante svg {
+    width: 32px;
+    height: 32px;
+    fill: #fff;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ============================================
+     RODAPÉ
+     ============================================ */
   footer {
     text-align: center;
-    padding: 40px 24px;
-    color: var(--texto-claro);
+    padding: 52px 24px 40px;
+    color: var(--texto-suave);
     font-size: 14px;
     border-top: 1px solid var(--borda);
-    background: #fff;
+    background: linear-gradient(180deg, var(--fundo), #F3EFE7);
+    position: relative;
   }
 
-  /* Responsivo */
-  @media (max-width: 640px) {
-    .barra-fixa { padding: 10px 16px; }
-    .logo { font-size: 16px; }
-    .btn-principal { padding: 10px 20px; font-size: 14px; }
-    .secao { padding: 60px 16px; }
-    .hero { padding: 120px 16px 60px; }
-    .preco-por { font-size: 44px; }
-    .card-investimento { padding: 36px 20px; }
-    .whatsapp-flutuante { width: 54px; height: 54px; bottom: 16px; right: 16px; }
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--verde-musgo-profundo);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .footer-logo svg {
+    width: 20px;
+    height: 20px;
+    color: var(--dourado);
+  }
+
+  footer .linha-dourada {
+    width: 60px;
+    height: 1px;
+    background: var(--dourado-claro);
+    margin: 16px auto;
+  }
+
+  /* ============================================
+     RESPONSIVO
+     ============================================ */
+  @media (max-width: 768px) {
+    .barra-fixa { padding: 12px 18px; }
+    .logo { font-size: 18px; }
+    .logo-estrela { width: 18px; height: 18px; }
+    .btn-premium { padding: 11px 22px; font-size: 14px; }
+    
+    .hero { padding: 130px 18px 70px; }
+    .secao { padding: 72px 18px; }
+    
+    .beneficio { padding: 24px 20px; }
+    .beneficio p { padding-left: 0; margin-top: 8px; }
+    .beneficio-cabecalho { flex-direction: column; align-items: flex-start; gap: 12px; }
+    
+    .card-investimento { padding: 44px 22px 36px; }
+    .preco-por { font-size: 54px; }
+    
+    .proposito { padding: 36px 24px; }
+    .proposito p { font-size: 20px; }
+    
+    .whatsapp-flutuante { 
+      width: 58px; height: 58px; 
+      bottom: 20px; right: 20px; 
+    }
+    .whatsapp-flutuante svg { width: 28px; height: 28px; }
+    
+    .texto-destaque::before, .texto-destaque::after { font-size: 44px; top: 14px; }
+  }
+
+  @media (max-width: 480px) {
+    .preco-por { font-size: 46px; }
+    .passo { padding: 32px 20px 26px; }
+    .faq-pergunta { padding: 20px; font-size: 17px; }
+    .faq-resposta { padding: 0 20px; }
+    .faq-item.ativo .faq-resposta { padding: 0 20px 22px; }
+  }
+
+  /* Animação de entrada suave */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: aparecer 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes aparecer {
+    to { opacity: 1; transform: translateY(0); }
   }
 </style>
 </head>
 <body>
 
-<!-- Barra fixa com CTA -->
+<!-- ============================================
+     BARRA FIXA SUPERIOR
+     ============================================ -->
 <div class="barra-fixa">
-  <div class="logo">Vida Arquetípica ✨</div>
-  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal">Agendar Sessão</a>
+  <div class="logo">
+    <!-- Ícone Estrela Premium -->
+    <svg class="logo-estrela" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2.5l2.9 6.2 6.6.7-4.9 4.5 1.4 6.6L12 17.6l-6 2.9 1.4-6.6L2.5 9.4l6.6-.7L12 2.5z"/>
+    </svg>
+    Vida Arquetípica
+  </div>
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-premium">
+    Agendar Sessão
+    <!-- Seta elegante -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </svg>
+  </a>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Direcionamento Arquetípico Completo<br>com Mapa Astral ✨</h1>
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero fade-in">
+  <div class="kicker">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+      <path d="M12 2l2.4 5.2L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5L8 11.9 4 8l5.6-.8L12 2z"/>
+    </svg>
+    Atendimento Personalizado · Mapa Astral + Arquétipos
+  </div>
+
+  <h1>
+    Direcionamento Arquetípico Completo<br>
+    <span class="dourado">com Mapa Astral</span>
+    <!-- Estrela Premium -->
+    <svg viewBox="0 0 24 24" fill="url(#grad-dourado)" style="width:36px;height:36px;vertical-align:middle;margin-left:8px;filter:drop-shadow(0 2px 6px rgba(200,162,90,0.5))">
+      <defs>
+        <linearGradient id="grad-dourado" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#E4CF9E"/>
+          <stop offset="50%" style="stop-color:#C8A25A"/>
+          <stop offset="100%" style="stop-color:#A8823A"/>
+        </linearGradient>
+      </defs>
+      <path d="M12 2l2.6 5.6L20.5 8.3l-4.5 4.3 1.2 6.4L12 16.8l-5.2 2.2 1.2-6.4L3.5 8.3l5.9-.7L12 2z"/>
+    </svg>
+  </h1>
+
   <p>
-    Existe uma versão sua esperando para ser encontrada. Quando você resgata essa versão — essa potência que já existe em você — é onde começa a sua grande transformação e mudança de vida.
+    Existe uma versão sua esperando para ser encontrada. Quando você resgata essa versão — essa potência que já existe em você, adormecida, esperando apenas pelo momento certo de despertar — é onde começa a sua grande transformação. A mudança de vida que você tanto busca, não começa de fora para dentro. Ela começa no momento em que você se encontra de verdade.
   </p>
-  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado">Quero meu Direcionamento</a>
-  <div class="divisoria"></div>
+
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-premium btn-dourado">
+    Quero Meu Direcionamento
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </svg>
+  </a>
+
+  <div class="divisoria-ornamental">
+    <div class="linha"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l1.8 4.2L18 7l-3.5 3.3L15.2 15 12 13.3 8.8 15l.7-4.7L6 7l4.2-.8L12 2z"/>
+    </svg>
+    <div class="linha"></div>
+  </div>
 </section>
 
-<!-- IMAGEM PRINCIPAL -->
+<!-- ============================================
+     IMAGEM PRINCIPAL
+     ============================================ -->
 <section class="secao" style="padding-top: 0;">
-  <img src="imagem 1.png" alt="Direcionamento Arquetípico" class="imagem-principal">
+  <div class="imagem-principal-wrap">
+    <img src="imagem 1.png" alt="Direcionamento Arquetípico — Uma nova direção para sua vida" class="imagem-principal">
+  </div>
 </section>
 
-<!-- PARA QUEM É -->
+<!-- ============================================
+     PARA QUEM É ESTE ATENDIMENTO
+     ============================================ -->
 <section class="secao secao-clara">
+  <span class="titulo-dourado">Para quem é este caminho</span>
   <h2>O direcionamento arquetípico é para você que:</h2>
-  <div class="subtitulo">Se identificou com algum ponto abaixo, este atendimento foi feito especialmente para o seu momento.</div>
+  <div class="subtitulo">
+    Se você se identificou com ao menos um destes pontos, saiba: este atendimento foi criado especialmente para o seu momento. Não é por acaso que você chegou até aqui.
+  </div>
   
   <div class="lista-quadros">
     <div class="item-lista">
-      <span class="marcador">✦</span>
-      <span>Está vivenciando padrões repetitivos em sua vida e não sabe como sair desse ciclo.</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3 2"/>
+      </svg>
+      <span>Está vivenciando <strong>padrões repetitivos</strong> em sua vida — nos relacionamentos, no dinheiro, no trabalho — e não sabe mais como sair desse ciclo que parece não ter fim.</span>
     </div>
+    
     <div class="item-lista">
-      <span class="marcador">✦</span>
-      <span>Vive bloqueios constantes ou muitas dificuldades em áreas importantes da sua vida e deseja saber exatamente a raiz do problema.</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L3 7v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V7l-9-5z"/>
+      </svg>
+      <span>Vive <strong>bloqueios constantes</strong> ou enfrenta dificuldades que se repetem em áreas importantes da sua vida… e deseja, mais do que tudo, <strong>saber exatamente qual é a raiz do problema</strong>.</span>
     </div>
+    
     <div class="item-lista">
-      <span class="marcador">✦</span>
-      <span>Já ativou diversos arquétipos e ainda não teve o resultado esperado.</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 1 1-4.96-.44A2.5 2.5 0 0 1 9.5 2z"/>
+        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 1 0 4.96-.44A2.5 2.5 0 0 0 14.5 2z"/>
+      </svg>
+      <span>Já ativou diversos arquétipos, estudou, se dedicou… e <strong>ainda não teve o resultado que esperava</strong>. Sente que falta algo, mas não sabe exatamente o quê.</span>
     </div>
+    
     <div class="item-lista">
-      <span class="marcador">✦</span>
-      <span>Deseja saber quais são os arquétipos mais indicados para você transformar sua vida de verdade.</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2l2.7 5.8L21 8.6l-4.5 4.3 1.3 6.3L12 16.9 6.2 19.2l1.3-6.3L3 8.6l6.3-.8L12 2z"/>
+        <path d="M12 16.9V22"/>
+      </svg>
+      <span>Deseja finalmente descobrir <strong>quais são os arquétipos mais indicados para VOCÊ</strong> — aqueles que realmente irão ajudar a transformar sua vida, de acordo com a sua energia única.</span>
     </div>
   </div>
 
-  <div class="divisoria"></div>
+  <div class="divisoria-ornamental" style="margin-top:64px;margin-bottom:48px;">
+    <div class="linha"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11h-4z"/>
+    </svg>
+    <div class="linha"></div>
+  </div>
+
   <p class="texto-destaque">
-    Quando você compreende o que traz a estagnação, o bloqueio do dinheiro, a falta de oportunidades em sua vida — é onde tudo muda.
+    Quando você compreende verdadeiramente o que traz a estagnação, o bloqueio do dinheiro, a sensação de falta de oportunidades ou a repetição de padrões dolorosos em sua vida — é exatamente aí que tudo começa a mudar.
   </p>
 </section>
 
-<!-- O QUE É O ATENDIMENTO -->
+<!-- ============================================
+     SOBRE O ATENDIMENTO
+     ============================================ -->
 <section class="secao">
-  <h2>Como funciona este atendimento</h2>
+  <span class="titulo-dourado">Como funciona</span>
+  <h2>Um mergulho profundo em você</h2>
   <div class="subtitulo">
-    Neste atendimento, investigamos <strong class="roxo">TUDO</strong> o que está impedindo o seu avanço e quais padrões precisam ser transformados. Você recebe um direcionamento completo, personalizado e focado no seu momento atual, além da indicação dos arquétipos mais adequados para você.
+    Neste atendimento, investigamos <strong style="color:var(--roxo-profundo)">tudo o que está impedindo o seu avanço</strong> e quais padrões precisam ser transformados para que você possa seguir em frente. Você recebe um direcionamento completo, profundamente personalizado e totalmente focado no seu momento atual — além da indicação precisa dos arquétipos mais adequados para a sua energia.
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
+<!-- ============================================
+     DEPOIMENTOS
+     ============================================ -->
 <section class="secao secao-clara">
-  <h2>Veja o depoimento real de quem já realizou</h2>
-  <div class="subtitulo">Histórias reais de pessoas que encontraram clareza e direção através do Direcionamento Arquetípico.</div>
+  <span class="titulo-dourado">Histórias reais</span>
+  <h2>Veja quem já encontrou sua direção</h2>
+  <div class="subtitulo">
+    Estas são algumas das pessoas que permitiram que eu compartilhasse um pouco do seu processo. Resultados reais, de vidas que começaram a se transformar a partir do momento em que se entenderam de verdade.
+  </div>
   
   <div class="grid-depoimentos">
-    <div class="depoimento"><img src="4.png" alt="Depoimento 1"></div>
-    <div class="depoimento"><img src="5.png" alt="Depoimento 2"></div>
-    <div class="depoimento"><img src="6.png" alt="Depoimento 3"></div>
-    <div class="depoimento"><img src="7.png" alt="Depoimento 4"></div>
-    <div class="depoimento"><img src="8.png" alt="Depoimento 5"></div>
-    <div class="depoimento"><img src="9.png" alt="Depoimento 6"></div>
+    <div class="depoimento"><img src="4.png" alt="Depoimento de quem realizou o Direcionamento Arquetípico"></div>
+    <div class="depoimento"><img src="5.png" alt="Resultado do atendimento"></div>
+    <div class="depoimento"><img src="6.png" alt="Transformação através dos arquétipos"></div>
+    <div class="depoimento"><img src="7.png" alt="Clareza e direção na vida"></div>
+    <div class="depoimento"><img src="8.png" alt="Atendimento com Mapa Astral"></div>
+    <div class="depoimento"><img src="9.png" alt="Mudança real de vida"></div>
   </div>
 </section>
 
-<!-- O QUE VOCÊ RECEBE -->
+<!-- ============================================
+     O QUE VOCÊ RECEBE — COM ÍCONES PREMIUM
+     ============================================ -->
 <section class="secao secao-roxa">
-  <h2>O que você recebe ao adquirir</h2>
-  <div class="subtitulo">Um material completo, feito especialmente para você, com tudo o que precisa para começar sua transformação.</div>
+  <span class="titulo-dourado">O que está incluso</span>
+  <h2>Tudo o que você recebe ao adquirir<br>seu Direcionamento Arquetípico</h2>
+  <div class="subtitulo">
+    Um material completo, feito à mão, especialmente para você. Cada detalhe pensado para que você tenha não apenas informação, mas <strong>verdadeira clareza e direção</strong>.
+  </div>
 
   <div class="grid-beneficios">
+    
+    <!-- 1. Análise Completa -->
     <div class="beneficio">
-      <div class="beneficio-titulo">
-        <div class="icone">✦</div>
-        Análise Completa de Mapa Astral
+      <div class="beneficio-cabecalho">
+        <div class="icone-premium icone-verde">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M8 7h8M8 11h5"/>
+          </svg>
+        </div>
+        <div class="beneficio-titulo">Análise Completa de Mapa Astral em Áudios + PDF</div>
       </div>
-      <p>Análise completa em áudios e PDFs explicando os pontos mais importantes do seu Mapa Astral: bloqueios, feridas, ciclos repetitivos, o que você precisa curar, suas potências, dons, talentos e o que mais precisa desenvolver para transformar sua vida.</p>
+      <p>Uma leitura aprofundada dos pontos mais importantes do seu Mapa Astral: seus bloqueios, feridas primárias, ciclos repetitivos, o que realmente precisa ser curado, quais são suas verdadeiras potências, dons e talentos adormecidos, e o que mais precisa ser desenvolvido para que sua vida se transforme de dentro para fora.</p>
     </div>
 
+    <!-- 2. Clareza dos Bloqueios -->
     <div class="beneficio">
-      <div class="beneficio-titulo">
-        <div class="icone">◈</div>
-        Clareza sobre os Bloqueios
+      <div class="beneficio-cabecalho">
+        <div class="icone-premium icone-dourado">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="beneficio-titulo">A Raiz Real dos Seus Bloqueios</div>
       </div>
-      <p>Você descobre o que realmente está causando o bloqueio e estagnação em sua vida e encontra direção e clareza para mudar sua situação atual de uma vez por todas.</p>
+      <p>Você finalmente descobre o que está, de fato, causando a estagnação, a falta de movimento e os bloqueios em sua vida. Não apenas sintomas — mas a causa profunda. E com essa descoberta, você recebe a direção e a clareza necessárias para mudar sua situação atual, de uma vez por todas.</p>
     </div>
 
+    <!-- 3. Confirmação com Tarô -->
     <div class="beneficio">
-      <div class="beneficio-titulo">
-        <div class="icone">❋</div>
-        Confirmação Completa com Tarô
+      <div class="beneficio-cabecalho">
+        <div class="icone-premium icone-roxo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="7" height="12" rx="1"/>
+            <rect x="14" y="4" width="7" height="12" rx="1"/>
+            <path d="M7 18h10M12 18v3M6 8l.5.5M18 8l.5.5"/>
+            <circle cx="6.5" cy="11" r="1"/>
+            <circle cx="17.5" cy="11" r="1"/>
+          </svg>
+        </div>
+        <div class="beneficio-titulo">Confirmação Completa com o Tarô</div>
       </div>
-      <p>Além do mapa astral, também realizo confirmações com o tarô para entender melhor os caminhos mais disponíveis para você, passando uma clareza e direção ainda mais completa e personalizada.</p>
+      <p>Além do Mapa Astral, também realizo uma leitura de confirmação com o Tarô, para compreender com ainda mais profundidade quais caminhos estão mais disponíveis para você neste momento. O resultado é uma clareza ainda mais completa, precisa e personalizada sobre os seus próximos passos.</p>
     </div>
 
+    <!-- 4. Combo de Arquétipos -->
     <div class="beneficio">
-      <div class="beneficio-titulo">
-        <div class="icone">✧</div>
-        Combo de Arquétipos Personalizado
+      <div class="beneficio-cabecalho">
+        <div class="icone-premium icone-dourado">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.4 5.2L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5L8 11.9 4 8l5.6-.8L12 2z"/>
+            <path d="M5 21h14"/>
+          </svg>
+        </div>
+        <div class="beneficio-titulo">Combo de Arquétipos Personalizado + Decreto</div>
       </div>
-      <p>Os arquétipos mais indicados para transformar sua realidade e desenvolver sua maior potência. Você também recebe a telinha personalizada desses arquétipos e o decreto potente de ativação para ativar da forma correta.</p>
+      <p>Os arquétipos exatos e mais indicados para você transformar sua realidade e despertar sua maior potência. Além disso, você recebe as telinhas personalizadas de cada arquétipo e um <strong>decreto potente de ativação</strong> — para que você saiba exatamente como ativá-los da forma correta, sem erros, sem achismos.</p>
     </div>
 
+    <!-- 5. Suporte WhatsApp -->
     <div class="beneficio">
-      <div class="beneficio-titulo">
-        <div class="icone">♥</div>
-        Suporte Direto pelo WhatsApp
+      <div class="beneficio-cabecalho">
+        <div class="icone-premium icone-verde">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            <path d="M8 10h.01M12 10h.01M16 10h.01"/>
+          </svg>
+        </div>
+        <div class="beneficio-titulo">Suporte Direto Comigo Pelo WhatsApp</div>
       </div>
-      <p>Após toda a análise você também pode tirar todas as suas dúvidas diretamente comigo online pelo WhatsApp — estou aqui para te acompanhar neste início de caminho.</p>
+      <p>Após receber toda a sua análise completa, você pode tirar <strong>todas as suas dúvidas diretamente comigo</strong>, online pelo WhatsApp. Não é um atendimento robótico, não é uma equipe — sou eu mesma, Érika, ali com você, para te acompanhar neste início de novo caminho.</p>
     </div>
+
   </div>
 </section>
 
-<!-- GALERIA DE MATERIAIS -->
+<!-- ============================================
+     GALERIA DE MATERIAIS
+     ============================================ -->
 <section class="secao">
-  <h2>Materiais que você receberá</h2>
-  <div class="subtitulo">Conteúdo visual, organizado e feito com muito cuidado para o seu processo.</div>
+  <span class="titulo-dourado">Uma prévia do que você recebe</span>
+  <h2>Materiais preparados com todo o cuidado</h2>
+  <div class="subtitulo">
+    Conteúdo visual, organizado e feito à mão para que cada detalhe do seu processo seja claro, bonito e profundamente significativo.
+  </div>
   
- <div class="carousel-container reveal fade-up">
-                    <div class="carousel">
-                        <img src="imagem%204.png" alt="Depoimento 1" loading="lazy">
-                        <img src="imagem%205.png" alt="Depoimento 2" loading="lazy">
-                        <img src="imagem%206.png" alt="Depoimento 3" loading="lazy">
-                        <img src="imagem%207.png" alt="Depoimento 4" loading="lazy">
-                        <img src="imagem%208.png" alt="Depoimento 5" loading="lazy">
-                        <img src="imagem%209.png" alt="Depoimento 6" loading="lazy">
+  <div class="grid-galeria">
+    <div class="galeria-item"><img src="imagem f 2.png" alt="Material personalizado do Direcionamento"></div>
+    <div class="galeria-item"><img src="imagem f 3.png" alt="Telinhas de arquétipos"></div>
+    <div class="galeria-item"><img src="imagem f 4.png" alt="Análise completa em PDF"></div>
+    <div class="galeria-item"><img src="imagem f 5.png" alt="Decretos de ativação"></div>
+    <div class="galeria-item"><img src="imagem f 6.png" alt="Mapa Astral detalhado"></div>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
+<!-- ============================================
+     PASSO A PASSO
+     ============================================ -->
 <section class="secao secao-clara">
-  <h2>Como funciona o processo</h2>
-  <div class="subtitulo">Simples, humano e completamente personalizado para você.</div>
+  <span class="titulo-dourado">Caminho simples</span>
+  <h2>Como funciona o seu processo</h2>
+  <div class="subtitulo">
+    Tudo pensado para ser simples, humano e completamente acolhedor. Você não precisa fazer nada sozinha — eu te acompanho em cada etapa.
+  </div>
 
   <div class="passos">
     <div class="passo">
       <div class="numero-passo">1</div>
-      <h3>Solicite sua análise</h3>
-      <p>Realize a solicitação da sua análise e efetue a confirmação do pagamento de forma segura.</p>
+      <h3>Você solicita sua análise</h3>
+      <p>Realize a solicitação do seu Direcionamento Arquetípico e efetue o pagamento de forma 100% segura através da plataforma.</p>
     </div>
+    
     <div class="passo">
       <div class="numero-passo">2</div>
-      <h3>Preencha o formulário</h3>
-      <p>Após o pagamento você recebe por e-mail ou WhatsApp um formulário para contar tudo o que está vivenciando.</p>
+      <h3>Compartilha sua história</h3>
+      <p>Após a confirmação, você recebe por e-mail e WhatsApp um formulário carinhoso, onde preenche seus dados e me conta tudo o que está vivenciando.</p>
     </div>
+    
     <div class="passo">
       <div class="numero-passo">3</div>
-      <h3>Receba seu direcionamento</h3>
-      <p>Realizo sua análise completa e em até 7 dias envio tudo para o seu WhatsApp: materiais, áudios e complementos.</p>
+      <h3>Recebe seu direcionamento</h3>
+      <p>Eu realizo sua análise completa e, em até 7 dias, entrego tudo diretamente no seu WhatsApp: materiais, áudios, arquétipos e todo o direcionamento.</p>
     </div>
   </div>
 </section>
 
-<!-- INVESTIMENTO -->
+<!-- ============================================
+     INVESTIMENTO
+     ============================================ -->
 <section class="secao">
+  <span class="titulo-dourado">Seu novo começo</span>
   <h2>Valor do Investimento</h2>
-  <div class="subtitulo">Uma oportunidade de se encontrar e construir a vida que realmente deseja.</div>
-
-  <div class="card-investimento">
-    <div class="vagas">⚡ Restam apenas 5 vagas disponíveis</div>
-    <div class="preco-de">De R$ 397,00</div>
-    <div class="preco-por">R$ 269,90</div>
-    <div class="preco-parcelado">ou 12x de R$ 27,91</div>
-    <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado">Quero Garantir Minha Vaga</a>
-    <p style="margin-top:24px;color:var(--texto-claro);font-size:14px;">Pagamento 100% seguro • Acesso ao suporte incluso</p>
+  <div class="subtitulo">
+    Mais do que um atendimento — é um convite para você finalmente se encontrar, compreender seus padrões e construir a vida que realmente deseja viver.
   </div>
 
-  <div class="divisoria"></div>
+  <div class="card-investimento">
+    <div class="card-ornamento">
+      <div class="linha"></div>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2 5 5 .5-4 3.5 1 5-4-2.5-4 2.5 1-5-4-3.5L10 7l2-5z"/></svg>
+      <div class="linha"></div>
+    </div>
+
+    <div class="vagas">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 5.2L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5L8 11.9 4 8l5.6-.8L12 2z"/></svg>
+      RESTAM APENAS 5 VAGAS DISPONÍVEIS
+    </div>
+
+    <div class="investimento-label">Investimento único</div>
+    <div class="preco-de">De R$ 397,00</div>
+    <div class="preco-por">R$ 269,90</div>
+    <div class="preco-parcelado">ou em até 12x de R$ 27,91</div>
+
+    <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-premium btn-dourado">
+      Quero Garantir Minha Vaga Agora
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 5l7 7-7 7"/>
+      </svg>
+    </a>
+
+    <div class="pagamento-seguro">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="11" width="16" height="10" rx="2"/>
+        <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+      </svg>
+      Pagamento 100% seguro · Proteção total dos seus dados
+    </div>
+  </div>
+
+  <div class="divisoria-ornamental" style="margin-top:80px;margin-bottom:64px;">
+    <div class="linha"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11h-4z"/>
+    </svg>
+    <div class="linha"></div>
+  </div>
 
   <div class="proposito">
     <p>
-      Este é o atendimento mais indicado para quem busca mudanças reais e deseja compreender com profundidade os desafios que está vivendo.<br><br>
-      <span class="roxo" style="font-weight:500;">Meu propósito não é apenas responder perguntas</span>, mas ajudar você a compreender seus desafios, identificar caminhos possíveis e desenvolver as energias necessárias para construir a vida que deseja.
+      Este é o atendimento mais indicado para quem busca <span class="destaque">mudanças reais</span> e deseja compreender com profundidade os desafios que está vivendo.<br><br>
+      Meu propósito não é apenas responder perguntas. É ajudar você a <span class="destaque">compreender seus desafios</span>, identificar caminhos verdadeiramente possíveis e desenvolver as energias necessárias para construir, passo a passo, a vida que você deseja.
     </p>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ============================================
+     PERGUNTAS FREQUENTES
+     ============================================ -->
 <section class="secao secao-clara">
+  <span class="titulo-dourado">Tire suas dúvidas</span>
   <h2>Perguntas frequentes</h2>
-  <div class="subtitulo">Tire suas principais dúvidas antes de agendar.</div>
+  <div class="subtitulo">
+    Se ainda restar alguma dúvida antes de tomar sua decisão, aqui estão as respostas para as perguntas que mais recebo. Se não encontrar o que procura, é só chamar no WhatsApp.
+  </div>
 
   <div class="faq">
+    
     <div class="faq-item">
       <button class="faq-pergunta">
-        Preciso ter conhecimento de Mapa Astral ou Arquétipos?
+        Preciso entender algo sobre Mapa Astral ou Arquétipos antes?
         <span class="faq-seta">+</span>
       </button>
       <div class="faq-resposta">
-        Não é necessário! Todo o material é explicado de forma simples, clara e acessível. Você receberá tudo já mastigado para entender exatamente o que cada ponto significa para a sua vida.
+        De jeito nenhum! Todo o material é explicado de forma simples, clara e acessível. Você receberá tudo já organizado e explicado, para entender exatamente o que cada ponto significa para a SUA vida, sem jargões, sem complicações.
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-pergunta">
-        Em quanto tempo recebo o meu Direcionamento?
+        Em quanto tempo recebo todo o meu Direcionamento Arquetípico?
         <span class="faq-seta">+</span>
       </button>
       <div class="faq-resposta">
-        O prazo para entrega completa é de até 7 dias corridos após o recebimento do seu formulário preenchido. Todo o conteúdo é enviado diretamente para o seu WhatsApp.
+        O prazo para entrega completa é de <strong>até 7 dias corridos</strong> após o recebimento do seu formulário preenchido com carinho. Todo o conteúdo — análises, áudios, telinhas, decretos e complementos — é enviado diretamente para o seu WhatsApp.
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-pergunta">
-        Como envio meus dados para a análise?
+        Como envio meus dados e minha história para a análise?
         <span class="faq-seta">+</span>
       </button>
       <div class="faq-resposta">
-        Logo após a confirmação do pagamento, você recebe automaticamente um link por e-mail e WhatsApp com um formulário simples, onde preenche seus dados de nascimento e compartilha o que está vivenciando no momento.
+        Logo após a confirmação do pagamento, você recebe automaticamente um link por e-mail e também pelo WhatsApp. É um formulário simples e acolhedor, onde você preenche seus dados de nascimento e tem espaço para me contar tudo o que está vivenciando no momento, e o que mais deseja transformar.
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-pergunta">
-        Posso tirar dúvidas depois de receber o material?
+        Posso tirar dúvidas depois de receber todo o material?
         <span class="faq-seta">+</span>
       </button>
       <div class="faq-resposta">
-        Sim! Após receber toda a sua análise, você pode tirar todas as suas dúvidas diretamente comigo pelo WhatsApp. Estou aqui para te acompanhar e garantir que tudo fique muito claro.
+        Sim, com certeza! Após receber sua análise completa, você pode tirar <strong>todas as suas dúvidas diretamente comigo</strong> pelo WhatsApp. Estou aqui para te acompanhar e garantir que cada ponto fique muito claro para você.
       </div>
     </div>
 
     <div class="faq-item">
       <button class="faq-pergunta">
-        O pagamento é seguro?
+        O pagamento é realmente seguro?
         <span class="faq-seta">+</span>
       </button>
       <div class="faq-resposta">
-        Totalmente seguro. O checkout é realizado pela Kiwify, plataforma certificada com criptografia de ponta a ponta e proteção de dados bancários.
+        Totalmente seguro. Todo o checkout é realizado pela Kiwify, uma das plataformas mais confiáveis do Brasil, com <strong>criptografia de ponta a ponta</strong> e certificação de segurança que protege todos os seus dados bancários e pessoais.
       </div>
     </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        Este atendimento é ao vivo ou gravado?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        É um atendimento <strong>profundamente personalizado, mas não é ao vivo</strong>. Eu realizo toda a análise com muito cuidado e dedicação, gravo áudios específicos para você, preparo todos os materiais e envio tudo pronto no seu WhatsApp. Depois, temos o suporte direto para tirar todas as dúvidas.
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section class="secao" style="text-align: center;">
-  <h2>Está pronta para encontrar<br>a sua direção? ✨</h2>
-  <div class="subtitulo">Sua versão mais potente já existe dentro de você — basta resgatá-la.</div>
-  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado" style="font-size:18px;padding:18px 56px;">Agendar Minha Sessão</a>
+<!-- ============================================
+     CTA FINAL
+     ============================================ -->
+<section class="cta-final">
+  <span class="titulo-dourado">Sua decisão</span>
+  <h2>Está pronta para encontrar<br><span class="dourado">a sua verdadeira direção?</span> ✦</h2>
+  <div class="subtitulo">
+    A versão mais potente de você já existe. Ela está aí, dentro de você, esperando apenas por este momento — o momento em que você decide finalmente se encontrar.
+  </div>
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-premium btn-dourado">
+    Quero Agendar Meu Atendimento
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </svg>
+  </a>
 </section>
 
-<!-- RODAPÉ -->
+<!-- ============================================
+     RODAPÉ
+     ============================================ -->
 <footer>
-  <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--verde-musgo);margin-bottom:8px;">Vida Arquetípica</div>
-  <p>© 2026 Todos os direitos reservados • Feito com ♥ e muita dedicação</p>
+  <div class="footer-logo">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 5.2L20 8l-4 3.9.9 5.6L12 15l-4.9 2.5L8 11.9 4 8l5.6-.8L12 2z"/></svg>
+    Vida Arquetípica
+  </div>
+  <div class="linha-dourada"></div>
+  <p>© 2026 Todos os direitos reservados · Feito com muito carinho, dedicação e propósito</p>
 </footer>
 
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://wa.me/message/HYCA7N7T73X4N1" target="_blank" class="whatsapp-flutuante" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 32 32"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.445-.547-.515-.995-1.104-1.39-1.724a.63.63 0 0 1 .096-.76c.253-.327.49-.626.688-.94.116-.183.25-.446.065-.667-.214-.255-.58-.39-.9-.465a3.42 3.42 0 0 0-.97-.037c-.49.073-1.144.327-1.75.857-1.49 1.29-2.218 3.26-2.14 5.19.04 1.03.37 2.11 1.008 3.06.89 1.33 2.48 2.31 4.28 2.66 1.73.34 3.47.1 4.97-.66 1.24-.63 2.26-1.6 2.88-2.82.28-.57.42-1.15.45-1.72.02-.42-.06-.83-.3-1.14-.3-.4-.85-.63-1.46-.64-.24 0-.48.04-.7.13-.22.08-.58.32-.75.4-.17.08-.3.09-.47.02zm-3.1 8.37c-1.54 0-3.04-.42-4.34-1.21-.5-.3-.97-.67-1.38-1.1l-.32-.34-.5 1.85 1.9-.5-.35-.36c-.46-.5-.83-1.06-1.1-1.68-.68-1.57-.6-3.4.22-4.88.4-.7.96-1.3 1.64-1.76 1.37-.93 3.14-1.2 4.77-.74.57.16 1.1.42 1.57.76l.3.23-1.68.94-.28-.18a3.12 3.12 0 0 0-1.5-.38c-.46-.02-.93.1-1.33.33-.7.4-1.18 1.05-1.34 1.8-.17.78-.03 1.6.4 2.28.2.3.44.58.72.82l.3.25-.38 1.4.25.3c.34.4.74.74 1.18 1 .57.34 1.2.57 1.85.68.78.13 1.58.07 2.32-.18.46-.16.9-.38 1.3-.66l.26-.18 1.55.86-.26.3c-.63.72-1.42 1.3-2.32 1.72-.96.45-2 .67-3.05.66zM16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.8 1.9 6.7L2 30l7.5-1.8A13.9 13.9 0 0 0 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/></svg>
+<!-- ============================================
+     WHATSAPP FLUTUANTE PREMIUM
+     ============================================ -->
+<a href="https://wa.me/message/HYCA7N7T73X4N1" target="_blank" class="whatsapp-flutuante" aria-label="Falar com Érika pelo WhatsApp">
+  <!-- Ícone WhatsApp Premium SVG -->
+  <svg viewBox="0 0 32 32">
+    <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.445-.547-.515-.995-1.104-1.39-1.724a.63.63 0 0 1 .096-.76c.253-.327.49-.626.688-.94.116-.183.25-.446.065-.667-.214-.255-.58-.39-.9-.465a3.42 3.42 0 0 0-.97-.037c-.49.073-1.144.327-1.75.857-1.49 1.29-2.218 3.26-2.14 5.19.04 1.03.37 2.11 1.008 3.06.89 1.33 2.48 2.31 4.28 2.66 1.73.34 3.47.1 4.97-.66 1.24-.63 2.26-1.6 2.88-2.82.28-.57.42-1.15.45-1.72.02-.42-.06-.83-.3-1.14-.3-.4-.85-.63-1.46-.64-.24 0-.48.04-.7.13-.22.08-.58.32-.75.4-.17.08-.3.09-.47.02zm-3.1 8.37c-1.54 0-3.04-.42-4.34-1.21-.5-.3-.97-.67-1.38-1.1l-.32-.34-.5 1.85 1.9-.5-.35-.36c-.46-.5-.83-1.06-1.1-1.68-.68-1.57-.6-3.4.22-4.88.4-.7.96-1.3 1.64-1.76 1.37-.93 3.14-1.2 4.77-.74.57.16 1.1.42 1.57.76l.3.23-1.68.94-.28-.18a3.12 3.12 0 0 0-1.5-.38c-.46-.02-.93.1-1.33.33-.7.4-1.18 1.05-1.34 1.8-.17.78-.03 1.6.4 2.28.2.3.44.58.72.82l.3.25-.38 1.4.25.3c.34.4.74.74 1.18 1 .57.34 1.2.57 1.85.68.78.13 1.58.07 2.32-.18.46-.16.9-.38 1.3-.66l.26-.18 1.55.86-.26.3c-.63.72-1.42 1.3-2.32 1.72-.96.45-2 .67-3.05.66zM16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.8 1.9 6.7L2 30l7.5-1.8A13.9 13.9 0 0 0 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/>
+  </svg>
 </a>
 
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
 <script>
-  // FAQ accordion
+  // FAQ Accordion Premium
   document.querySelectorAll('.faq-pergunta').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const estavaAtivo = item.classList.contains('ativo');
+      
+      // Fecha todos
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('ativo'));
-      if (!estavaAtivo) item.classList.add('ativo');
+      
+      // Abre o clicado (se não estava ativo)
+      if (!estavaAtivo) {
+        item.classList.add('ativo');
+      }
     });
+  });
+
+  // Efeito suave na barra ao rolar
+  window.addEventListener('scroll', () => {
+    const barra = document.querySelector('.barra-fixa');
+    if (window.scrollY > 40) {
+      barra.style.boxShadow = '0 8px 30px rgba(78, 107, 71, 0.1)';
+      barra.style.padding = '10px 32px';
+    } else {
+      barra.style.boxShadow = 'none';
+      barra.style.padding = '14px 32px';
+    }
   });
 </script>
 
