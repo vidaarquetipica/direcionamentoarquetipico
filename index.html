@@ -1,628 +1,766 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Direcionamento Arquetípico | Érika</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --clr-bg-dark: #0A040E;
-            --clr-bg-surface: #14081E;
-            --clr-primary-purple: #27103C;
-            --clr-secondary-wine: #31111D;
-            --clr-secondary-green: #0E2218;
-            --clr-gold-light: #F4E2AA;
-            --clr-gold-base: #D8B15A;
-            --clr-gold-dark: #9E7D35;
-            --clr-text-main: #F3F1F5;
-            --clr-text-muted: #AFA8B8;
-            --clr-white: #FFFFFF;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Inter', sans-serif;
-            --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.4);
-            --shadow-glow: 0 0 20px rgba(216, 177, 90, 0.2);
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: 1px solid rgba(216, 177, 90, 0.15);
-            --container-width: 1050px;
-            --section-padding-y: 75px;
-            --radius-md: 10px;
-            --radius-lg: 20px;
-            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direcionamento Arquetípico Completo com Mapa Astral ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style>
+  :root {
+    --verde-musgo: #5B7553;
+    --verde-claro: #8BA888;
+    --verde-agua: #D4DED0;
+    --dourado: #C9A961;
+    --dourado-claro: #E8D5A3;
+    --roxo: #9B8AA3;
+    --roxo-claro: #C9BFD1;
+    --fundo: #FBFAF7;
+    --texto: #3A3A3A;
+    --texto-claro: #6B6B6B;
+    --borda: #E8E4DC;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--verde-musgo);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .dourado { color: var(--dourado); }
+  .roxo { color: var(--roxo); }
 
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 13.5px; }
-        body { font-family: var(--font-body); background-color: var(--clr-bg-dark); color: var(--clr-text-main); line-height: 1.5; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; line-height: 1.2; color: var(--clr-white); }
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+  /* Barra fixa superior */
+  .barra-fixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(251, 250, 247, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--verde-musgo);
+  }
+  .btn-principal {
+    display: inline-block;
+    background: var(--verde-musgo);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(91, 117, 83, 0.25);
+  }
+  .btn-principal:hover {
+    background: #4A6243;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(91, 117, 83, 0.35);
+  }
+  .btn-dourado {
+    background: var(--dourado);
+    box-shadow: 0 4px 14px rgba(201, 169, 97, 0.3);
+  }
+  .btn-dourado:hover {
+    background: #B89850;
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
+  }
 
-        .container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
-        section { padding: var(--section-padding-y) 0; position: relative; }
-        .section-header { text-align: center; margin-bottom: 45px; }
-        .section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-bottom: 12px; }
-        .section-header h2 span { color: var(--clr-gold-base); font-style: italic; }
-        .section-header p { color: var(--clr-text-muted); font-size: 1rem; }
-        .glass-panel { background: var(--glass-bg); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: var(--glass-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); }
+  /* Hero */
+  .hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(201, 169, 97, 0.08), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(155, 138, 163, 0.1), transparent 50%);
+  }
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+  .hero p {
+    font-size: clamp(17px, 2.2vw, 20px);
+    color: var(--texto-claro);
+    max-width: 720px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+  }
+  .divisoria {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dourado), transparent);
+    margin: 40px auto;
+  }
 
-        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--clr-gold-light), var(--clr-gold-base)); color: var(--clr-bg-dark); font-family: var(--font-body); font-weight: 600; font-size: 1rem; padding: 16px 32px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); box-shadow: var(--shadow-glow); text-align: center; cursor: pointer; border: none; }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(216, 177, 90, 0.4); background: linear-gradient(135deg, var(--clr-white), var(--clr-gold-light)); }
-        .cta-button-small { background: transparent; color: var(--clr-gold-base); border: 1px solid var(--clr-gold-base); padding: 8px 20px; border-radius: 4px; font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: var(--transition-smooth); }
-        .cta-button-small:hover { background: var(--clr-gold-base); color: var(--clr-bg-dark); }
+  /* Seções */
+  .secao {
+    padding: 80px 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .secao h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .subtitulo {
+    text-align: center;
+    color: var(--texto-claro);
+    font-size: 17px;
+    max-width: 700px;
+    margin: 0 auto 56px;
+  }
+  .secao-clara {
+    background: #fff;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+  }
+  .secao-roxa {
+    background: linear-gradient(180deg, #F7F4F9 0%, #FBFAF7 100%);
+  }
 
-        .header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(10, 4, 14, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); padding: 12px 0; transition: var(--transition-smooth); }
-        .header.scrolled { padding: 8px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        .header-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: var(--font-heading); font-size: 1.3rem; color: var(--clr-gold-base); font-weight: 700; }
-        .logo span { font-family: var(--font-body); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-muted); font-weight: 400; margin-left: 8px; border-left: 1px solid var(--clr-text-muted); padding-left: 8px; }
+  /* Imagem principal */
+  .imagem-principal {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(91, 117, 83, 0.15);
+  }
 
-        .hero { padding-top: 120px; min-height: 90vh; display: flex; align-items: center; background: radial-gradient(circle at 80% 20%, var(--clr-primary-purple), var(--clr-bg-dark) 60%); }
-        .hero-grid { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: 0 auto; gap: 30px; }
-        .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.8rem); margin-bottom: 10px; }
-        .hero h1 span { color: var(--clr-gold-base); font-style: italic; }
-        .subtitle { font-size: 1.1rem; color: var(--clr-text-muted); margin-bottom: 20px; }
-        
-        .hero-image-wrapper { width: 100%; max-width: 420px; margin: 15px auto; }
-        .image-frame { position: relative; width: 100%; border: 1px solid var(--clr-gold-base); border-radius: var(--radius-md); padding: 10px; box-shadow: var(--shadow-soft); background: var(--clr-bg-surface); display: flex; align-items: center; justify-content: center; }
-        .image-frame img { width: 100%; height: auto; border-radius: 6px; display: block; object-fit: cover; }
+  /* Lista para quem é */
+  .lista-quadros {
+    display: grid;
+    gap: 16px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .item-lista {
+    background: #fff;
+    padding: 20px 24px;
+    border-radius: 12px;
+    border-left: 3px solid var(--dourado);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .marcador {
+    color: var(--verde-musgo);
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
 
-        .hero-quote { border-left: 2px solid var(--clr-gold-base); padding-left: 15px; margin: 20px 0; text-align: left; }
-        .hero-quote p { font-family: var(--font-heading); font-style: italic; font-size: 1.05rem; color: var(--clr-white); }
-        .hero-features { margin: 20px 0; text-align: left; width: 100%; }
-        .hero-features li { margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; }
-        .hero-features i { color: var(--clr-gold-base); font-size: 0.6rem; margin-top: 5px; }
-        .cta-wrapper { display: flex; flex-direction: column; gap: 12px; width: 100%; align-items: center; }
-        .cta-subtext { display: flex; flex-direction: column; gap: 4px; }
-        .scarcity { font-size: 0.8rem; color: var(--clr-gold-dark); }
+  /* Texto central */
+  .texto-destaque {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 28px);
+    text-align: center;
+    color: var(--verde-musgo);
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.4;
+    font-weight: 500;
+  }
 
-        .para-quem { background-color: var(--clr-bg-surface); }
-        .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
-        .premium-card { padding: 40px 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-soft); position: relative; overflow: hidden; }
-        .card-green { background: linear-gradient(145deg, var(--clr-secondary-green), #08140e); border: 1px solid rgba(216, 177, 90, 0.3); }
-        .card-wine { background: linear-gradient(145deg, var(--clr-secondary-wine), #1a080f); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .card-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 25px; }
-        .card-green .card-icon { background: rgba(216, 177, 90, 0.1); color: var(--clr-gold-base); }
-        .card-wine .card-icon { background: rgba(255, 255, 255, 0.05); color: #e5989b; }
-        .premium-card h3 { font-size: 1.3rem; margin-bottom: 20px; }
-        .card-green h3 { color: var(--clr-gold-base); }
-        .card-wine h3 { color: #e5989b; }
-        .check-list li, .cross-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; font-size: 0.95rem; }
-        .check-list i { color: var(--clr-gold-base); margin-top: 4px; }
-        .cross-list i { color: #e5989b; margin-top: 4px; }
+  /* Depoimentos */
+  .grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .depoimento {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+    background: #fff;
+  }
+  .depoimento:hover { transform: translateY(-4px); }
+  .depoimento img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-        .como-funciona { background-color: var(--clr-bg-dark); }
-        .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; position: relative; }
-        .timeline::before { content: ''; position: absolute; top: 20px; left: 40px; right: 40px; height: 1px; background: rgba(216, 177, 90, 0.2); z-index: 1; }
-        @media (max-width: 992px) { .timeline::before { display: none; } }
-        .timeline-item { position: relative; z-index: 2; }
-        .timeline-dot { width: 42px; height: 42px; background: var(--clr-bg-dark); border: 1px solid var(--clr-gold-base); color: var(--clr-gold-base); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.1rem; margin: 0 auto 20px; }
-        .timeline-content { padding: 25px 15px; text-align: center; height: calc(100% - 65px); }
-        .timeline-content h4 { color: var(--clr-gold-base); margin-bottom: 12px; font-size: 1.05rem; }
-        .timeline-content p { font-size: 0.85rem; color: var(--clr-text-muted); }
+  /* O que recebe */
+  .grid-beneficios {
+    display: grid;
+    gap: 20px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .beneficio {
+    background: #fff;
+    padding: 24px 28px;
+    border-radius: 14px;
+    border: 1px solid var(--borda);
+    transition: all 0.3s ease;
+  }
+  .beneficio:hover {
+    border-color: var(--verde-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(91, 117, 83, 0.08);
+  }
+  .beneficio-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--verde-musgo);
+    font-size: 17px;
+  }
+  .icone {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--verde-agua);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde-musgo);
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .beneficio p {
+    margin: 0;
+    color: var(--texto-claro);
+    font-size: 15px;
+    padding-left: 48px;
+  }
 
-        .entregas { background-color: var(--clr-bg-surface); }
-        .entregas-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center; }
-        .mockups { display: flex; flex-direction: column; gap: 20px; align-items: center; }
-        .mockup-img { width: 100%; max-width: 360px; border-radius: var(--radius-md); border: 1px solid rgba(216,177,90,0.3); box-shadow: var(--shadow-soft); object-fit: cover; }
-        .entregas-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
-        .entrega-card { display: flex; align-items: center; gap: 15px; padding: 15px 18px; background: rgba(0,0,0,0.2); border-left: 2px solid var(--clr-gold-dark); border-radius: 4px; transition: var(--transition-smooth); }
-        .entrega-card:hover { background: rgba(216, 177, 90, 0.05); border-left-color: var(--clr-gold-base); transform: translateX(6px); }
-        .entrega-card i { font-size: 1.3rem; color: var(--clr-gold-base); width: 25px; text-align: center; }
-        .entrega-card h4 { font-family: var(--font-body); font-size: 0.95rem; margin-bottom: 2px; }
-        .entrega-card p { font-size: 0.8rem; color: var(--clr-text-muted); margin: 0; }
-        .center-cta { text-align: center; margin-top: 45px; }
+  /* Galeria */
+  .grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .galeria-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(155, 138, 163, 0.12);
+  }
+  .galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .galeria-item:hover img { transform: scale(1.03); }
 
-        .depoimentos { background-color: var(--clr-bg-dark); overflow: hidden; }
-        .carousel-container { width: 100%; }
-        .carousel { display: flex; gap: 15px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 15px 0 30px; scrollbar-width: none; }
-        .carousel::-webkit-scrollbar { display: none; }
-        .carousel img { flex: 0 0 calc(33.333% - 10px); scroll-snap-align: center; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-soft); transition: var(--transition-smooth); object-fit: cover; }
-        .carousel img:hover { transform: scale(1.02); border-color: rgba(216, 177, 90, 0.3); }
+  /* Como funciona */
+  .passos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .passo {
+    text-align: center;
+    padding: 32px 20px;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
+    border: 1px solid var(--borda);
+  }
+  .numero-passo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--dourado), var(--dourado-claro));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 auto 16px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .passo h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--roxo);
+  }
+  .passo p {
+    color: var(--texto-claro);
+    font-size: 15px;
+    margin: 0;
+  }
 
-        .investimento { background: radial-gradient(circle at center, var(--clr-primary-purple), var(--clr-bg-dark) 80%); }
-        .investment-intro { text-align: center; max-width: 700px; margin: 0 auto 45px; }
-        .quote-icon { font-size: 1.6rem; color: var(--clr-gold-dark); margin-bottom: 15px; }
-        .investment-intro p { font-size: 1.05rem; font-style: italic; color: var(--clr-text-muted); }
-        .investment-card { max-width: 680px; margin: 0 auto; padding: 2px; background: linear-gradient(135deg, rgba(216,177,90,0.4), rgba(0,0,0,0)); border-radius: var(--radius-lg); }
-        .card-inner { background: var(--clr-bg-surface); border-radius: calc(var(--radius-lg) - 2px); padding: 45px 35px; text-align: center; }
-        .card-inner h3 { font-size: 1.7rem; color: var(--clr-white); margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px; }
-        .card-inner h3 span { color: var(--clr-gold-base); display: block; }
-        .investment-features { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; margin-bottom: 30px; }
-        .investment-features li { margin-bottom: 10px; color: var(--clr-text-main); display: flex; align-items: center; gap: 8px; font-size: 0.9rem; }
-        .investment-features i { color: var(--clr-gold-base); font-size: 0.7rem; }
-        .price-box { margin-bottom: 30px; }
-        .price-label { text-transform: uppercase; letter-spacing: 2px; color: var(--clr-text-muted); font-size: 0.8rem; display: block; margin-bottom: 8px; }
-        .price-cash { font-family: var(--font-heading); font-size: 3.2rem; color: var(--clr-gold-base); line-height: 1; margin-bottom: 8px; }
-        .suffix { font-family: var(--font-body); font-size: 1rem; color: var(--clr-text-main); font-weight: 400; }
-        .price-term { font-size: 1.05rem; color: var(--clr-text-muted); }
-        .investment-footer { margin-top: 30px; }
-        .investment-footer p { font-style: italic; font-size: 0.85rem; color: var(--clr-text-muted); margin-bottom: 15px; }
-        .scarcity-badge { display: inline-block; padding: 6px 15px; background: rgba(216, 177, 90, 0.1); border: 1px solid var(--clr-gold-dark); color: var(--clr-gold-base); border-radius: 50px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+  /* Investimento */
+  .card-investimento {
+    max-width: 560px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #fff 0%, #F7F4F9 100%);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 48px 32px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(91, 117, 83, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  .card-investimento::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--verde-musgo), var(--dourado), var(--roxo));
+  }
+  .vagas {
+    display: inline-block;
+    background: rgba(201, 169, 97, 0.15);
+    color: #8B6E30;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .preco-de {
+    color: var(--texto-claro);
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .preco-por {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 56px;
+    font-weight: 600;
+    color: var(--verde-musgo);
+    line-height: 1;
+    margin: 8px 0;
+  }
+  .preco-parcelado {
+    color: var(--roxo);
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .card-investimento .btn-principal {
+    font-size: 17px;
+    padding: 16px 48px;
+  }
 
-        .faq { background-color: var(--clr-bg-dark); }
-        .accordion { max-width: 700px; margin: 0 auto; }
-        .accordion-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .accordion-header { width: 100%; text-align: left; background: none; border: none; padding: 20px 0; color: var(--clr-white); font-family: var(--font-heading); font-size: 1.15rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition-smooth); }
-        .accordion-header:hover, .accordion-header.active { color: var(--clr-gold-base); }
-        .accordion-header i { font-size: 0.9rem; transition: transform 0.3s ease; }
-        .accordion-header.active i { transform: rotate(180deg); }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-        .accordion-content p { padding-bottom: 20px; color: var(--clr-text-muted); font-size: 0.9rem; }
+  /* Propósito */
+  .proposito {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    border-left: 3px solid var(--roxo);
+    border-right: 3px solid var(--roxo);
+    border-radius: 4px;
+  }
+  .proposito p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--texto);
+    margin: 0;
+  }
 
-        .cta-final { background-color: var(--clr-bg-surface); border-top: 1px solid rgba(216,177,90,0.2); }
-        .final-box { max-width: 700px; margin: 0 auto; padding: 45px 30px; text-align: center; }
-        .author-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--clr-gold-base); margin: 0 auto 20px; }
-        .final-dilemma { font-size: 1.6rem; line-height: 1.4; margin-bottom: 20px; }
-        .final-dilemma span { color: var(--clr-gold-base); font-style: italic; }
-        .final-desc { color: var(--clr-text-muted); font-size: 0.95rem; margin-bottom: 30px; }
-        .final-scarcity { margin-top: 15px; color: var(--clr-gold-dark); font-size: 0.8rem; }
+  /* FAQ */
+  .faq {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--borda);
+    overflow: hidden;
+  }
+  .faq-pergunta {
+    width: 100%;
+    text-align: left;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--verde-musgo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+  }
+  .faq-pergunta:hover { background: #FAF9F5; }
+  .faq-seta {
+    color: var(--dourado);
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+  .faq-item.ativo .faq-seta { transform: rotate(180deg); }
+  .faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 24px;
+    color: var(--texto-claro);
+    font-size: 15px;
+  }
+  .faq-item.ativo .faq-resposta {
+    max-height: 300px;
+    padding: 0 24px 24px;
+  }
 
-        .footer { background-color: #050208; padding: 45px 0 80px; text-align: center; }
-        .footer-brand { font-family: var(--font-heading); font-size: 1.3rem; color: var(--clr-white); margin-bottom: 15px; }
-        .footer-brand span { color: var(--clr-text-muted); font-family: var(--font-body); font-size: 0.9rem; }
-        .footer p { color: var(--clr-text-muted); font-size: 0.8rem; margin-bottom: 8px; }
-        .disclaimer { max-width: 550px; margin: 15px auto 0; font-size: 0.75rem !important; opacity: 0.6; }
+  /* WhatsApp flutuante */
+  .whatsapp-flutuante {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 99;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .whatsapp-flutuante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+  }
+  .whatsapp-flutuante svg { width: 30px; height: 30px; fill: #fff; }
 
-        .floating-whatsapp { position: fixed; bottom: 25px; right: 25px; width: 52px; height: 52px; background-color: #25D366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.7rem; box-shadow: var(--shadow-soft); z-index: 1000; transition: var(--transition-smooth); }
-        .floating-whatsapp:hover { transform: scale(1.1); }
-        .sticky-mobile-cta { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(10, 4, 14, 0.95); backdrop-filter: blur(10px); padding: 12px 15px; z-index: 999; border-top: 1px solid rgba(255,255,255,0.05); }
-        .sticky-mobile-cta .cta-button { width: 100%; padding: 12px; font-size: 0.9rem; }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--texto-claro);
+    font-size: 14px;
+    border-top: 1px solid var(--borda);
+    background: #fff;
+  }
 
-        .reveal { opacity: 0; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal.active { opacity: 1; transform: translate(0, 0); }
-        .fade-up { transform: translateY(30px); }
-        .fade-left { transform: translateX(30px); }
-        .fade-right { transform: translateX(-30px); }
-
-        @media (max-width: 1024px) { .timeline { grid-template-columns: 1fr 1fr; gap: 30px; } }
-        @media (max-width: 900px) {
-            .cards-grid { grid-template-columns: 1fr; }
-            .entregas-grid { grid-template-columns: 1fr; }
-            .mockups { flex-direction: row; overflow-x: auto; }
-            .mockups img { width: 80%; flex-shrink: 0; }
-            .investment-features { grid-template-columns: 1fr; }
-            .carousel img { flex: 0 0 calc(50% - 10px); }
-        }
-        @media (max-width: 600px) {
-            :root { --section-padding-y: 50px; }
-            .hero { padding-top: 90px; }
-            .hero h1 { font-size: 1.9rem; }
-            .cta-button { width: 100%; display: block; padding: 15px 20px; }
-            .timeline { grid-template-columns: 1fr; }
-            .card-inner { padding: 30px 20px; }
-            .price-cash { font-size: 2.4rem; }
-            .carousel img { flex: 0 0 calc(85% - 15px); }
-            .final-box { padding: 30px 15px; }
-            .final-dilemma { font-size: 1.3rem; }
-            .sticky-mobile-cta { display: block; }
-            .floating-whatsapp { bottom: 75px; right: 15px; width: 45px; height: 45px; font-size: 1.3rem; }
-        }
-    </style>
+  /* Responsivo */
+  @media (max-width: 640px) {
+    .barra-fixa { padding: 10px 16px; }
+    .logo { font-size: 16px; }
+    .btn-principal { padding: 10px 20px; font-size: 14px; }
+    .secao { padding: 60px 16px; }
+    .hero { padding: 120px 16px 60px; }
+    .preco-por { font-size: 44px; }
+    .card-investimento { padding: 36px 20px; }
+    .whatsapp-flutuante { width: 54px; height: 54px; bottom: 16px; right: 16px; }
+  }
+</style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="container header-container">
-            <div class="logo">Érika <span>Vida Arquetípica</span></div>
-            <a href="#" class="cta-button-small checkout-btn">Agendar Sessão</a>
-        </div>
-    </header>
+<!-- Barra fixa com CTA -->
+<div class="barra-fixa">
+  <div class="logo">Vida Arquetípica ✨</div>
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal">Agendar Sessão</a>
+</div>
 
-    <main>
-        <!-- 1. HERO -->
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div class="hero-content reveal fade-up">
-                        <h1>Direcionamento <br><span>Arquetípico</span></h1>
-                        <p class="subtitle">Pare de repetir os mesmos padrões e descubra o que realmente está impedindo a sua vida de avançar.</p>
-                    </div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Direcionamento Arquetípico Completo<br>com Mapa Astral ✨</h1>
+  <p>
+    Existe uma versão sua esperando para ser encontrada. Quando você resgata essa versão — essa potência que já existe em você — é onde começa a sua grande transformação e mudança de vida.
+  </p>
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado">Quero meu Direcionamento</a>
+  <div class="divisoria"></div>
+</section>
 
-                    <!-- IMAGEM 1 LOGO ABAIXO DA FRASE PRINCIPAL -->
-                    <div class="hero-image-wrapper reveal fade-up">
-                        <div class="image-frame">
-                            <img src="imagem 1.png" alt="Érika - Direcionamento Arquetípico" loading="lazy">
-                        </div>
-                    </div>
+<!-- IMAGEM PRINCIPAL -->
+<section class="secao" style="padding-top: 0;">
+  <img src="1.png" alt="Direcionamento Arquetípico" class="imagem-principal">
+</section>
 
-                    <div class="hero-content reveal fade-up" style="width: 100%;">
-                        <div class="hero-quote">
-                            <p>Uma análise profunda que une Mapa Astral, Tarô e Alinhamento Arquetípico Personalizado para revelar a origem dos seus bloqueios e mostrar, com clareza, quais caminhos desenvolver para construir uma vida mais leve, próspera e alinhada.</p>
-                        </div>
-                        
-                        <ul class="hero-features">
-                            <li><i class="fa-solid fa-diamond"></i> Não é uma leitura pronta.</li>
-                            <li><i class="fa-solid fa-diamond"></i> Não é uma interpretação genérica.</li>
-                            <li><i class="fa-solid fa-diamond"></i> É um estudo completamente personalizado, construído a partir da sua história, da sua energia e do seu momento de vida.</li>
-                        </ul>
-                        
-                        <div class="cta-wrapper">
-                            <a href="#" class="cta-button checkout-btn">Quero iniciar minha transformação</a>
-                            <div class="cta-subtext">
-                                <span class="scarcity"><i class="fa-solid fa-lock"></i> Apenas 8 atendimentos são disponibilizados por mês para preservar a profundidade e a qualidade de cada análise.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- PARA QUEM É -->
+<section class="secao secao-clara">
+  <h2>O direcionamento arquetípico é para você que:</h2>
+  <div class="subtitulo">Se identificou com algum ponto abaixo, este atendimento foi feito especialmente para o seu momento.</div>
+  
+  <div class="lista-quadros">
+    <div class="item-lista">
+      <span class="marcador">✦</span>
+      <span>Está vivenciando padrões repetitivos em sua vida e não sabe como sair desse ciclo.</span>
+    </div>
+    <div class="item-lista">
+      <span class="marcador">✦</span>
+      <span>Vive bloqueios constantes ou muitas dificuldades em áreas importantes da sua vida e deseja saber exatamente a raiz do problema.</span>
+    </div>
+    <div class="item-lista">
+      <span class="marcador">✦</span>
+      <span>Já ativou diversos arquétipos e ainda não teve o resultado esperado.</span>
+    </div>
+    <div class="item-lista">
+      <span class="marcador">✦</span>
+      <span>Deseja saber quais são os arquétipos mais indicados para você transformar sua vida de verdade.</span>
+    </div>
+  </div>
 
-        <!-- 2. PARA QUEM É -->
-        <section id="para-quem" class="para-quem">
-            <div class="container">
-                <div class="section-header reveal fade-up">
-                    <h2>Alinhamento de <span>Propósito</span></h2>
-                    <p>Entenda se este é o momento exato para a sua jornada.</p>
-                </div>
-                
-                <div class="cards-grid">
-                    <div class="premium-card card-green reveal fade-up" style="transition-delay: 0.1s;">
-                        <div class="card-icon"><i class="fa-solid fa-check-double"></i></div>
-                        <h3>Esse atendimento é para você se...</h3>
-                        <ul class="check-list">
-                            <li><i class="fa-solid fa-check"></i> sente que vive repetindo os mesmos ciclos no amor, dinheiro ou carreira;</li>
-                            <li><i class="fa-solid fa-check"></i> percebe que existe um bloqueio, mas nunca consegue identificar sua origem;</li>
-                            <li><i class="fa-solid fa-check"></i> deseja tomar decisões com mais segurança;</li>
-                            <li><i class="fa-solid fa-check"></i> busca compreender sua essência e desenvolver seu potencial;</li>
-                            <li><i class="fa-solid fa-check"></i> quer orientações práticas e personalizadas;</li>
-                            <li><i class="fa-solid fa-check"></i> está pronta para assumir um novo posicionamento diante da própria vida.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="premium-card card-wine reveal fade-up" style="transition-delay: 0.3s;">
-                        <div class="card-icon"><i class="fa-solid fa-xmark"></i></div>
-                        <h3>Talvez este atendimento não seja para você...</h3>
-                        <ul class="cross-list">
-                            <li><i class="fa-solid fa-xmark"></i> procura apenas previsões rápidas;</li>
-                            <li><i class="fa-solid fa-xmark"></i> espera soluções sem participação ativa;</li>
-                            <li><i class="fa-solid fa-xmark"></i> não está aberta ao autoconhecimento e às mudanças que ele exige.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="divisoria"></div>
+  <p class="texto-destaque">
+    Quando você compreende o que traz a estagnação, o bloqueio do dinheiro, a falta de oportunidades em sua vida — é onde tudo muda.
+  </p>
+</section>
 
-        <!-- 3. COMO FUNCIONA -->
-        <section id="como-funciona" class="como-funciona">
-            <div class="container">
-                <div class="section-header reveal fade-up">
-                    <h2>Como funciona o meu <span>método</span></h2>
-                    <p>Um processo estruturado, profundo e totalmente focado em você.</p>
-                </div>
-                
-                <div class="timeline">
-                    <div class="timeline-item reveal fade-right">
-                        <div class="timeline-dot">1</div>
-                        <div class="timeline-content glass-panel">
-                            <h4>Você compartilha sua história.</h4>
-                            <p>Por meio de um formulário detalhado, compreendo seus desafios, objetivos, padrões repetitivos e tudo aquilo que deseja transformar.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item reveal fade-left">
-                        <div class="timeline-dot">2</div>
-                        <div class="timeline-content glass-panel">
-                            <h4>Análise completa do Mapa Astral.</h4>
-                            <p>Cruzo cada informação da sua história com o seu mapa para identificar talentos, potencialidades e as raízes dos bloqueios.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item reveal fade-right">
-                        <div class="timeline-dot">3</div>
-                        <div class="timeline-content glass-panel">
-                            <h4>Direcionamento através do Tarô.</h4>
-                            <p>Realizo uma tiragem personalizada para confirmar os padrões encontrados, compreender o momento atual e apontar possibilidades de desenvolvimento.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item reveal fade-left">
-                        <div class="timeline-dot">4</div>
-                        <div class="timeline-content glass-panel">
-                            <h4>Plano personalizado de transformação.</h4>
-                            <p>Você recebe uma entrega completa com explicações detalhadas, materiais exclusivos e orientações práticas para aplicar imediatamente.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- O QUE É O ATENDIMENTO -->
+<section class="secao">
+  <h2>Como funciona este atendimento</h2>
+  <div class="subtitulo">
+    Neste atendimento, investigamos <strong class="roxo">TUDO</strong> o que está impedindo o seu avanço e quais padrões precisam ser transformados. Você recebe um direcionamento completo, personalizado e focado no seu momento atual, além da indicação dos arquétipos mais adequados para você.
+  </div>
+</section>
 
-        <!-- 4. O QUE VOCÊ RECEBE -->
-        <section id="entregas" class="entregas">
-            <div class="container">
-                <div class="section-header reveal fade-up">
-                    <h2>O que você <span>recebe</span></h2>
-                    <p>Um material completo, detalhado e vitalício para guiar seus próximos passos.</p>
-                </div>
-                
-                <div class="entregas-grid">
-                    <div class="mockups reveal fade-up">
-                        <img src="imagem f 2.png" alt="Material do Direcionamento" class="mockup-img" loading="lazy">
-                        <img src="imagem f 3.png" alt="Telinhas Arquetípicas" class="mockup-img" loading="lazy">
-                        <img src="imagem f 4.png" alt="Telinhas Arquetípicas2" class="mockup-img" loading="lazy">
-                        <img src="imagem f 5.png" alt="Telinhas Arquetípicas3" class="mockup-img" loading="lazy">
-                        <img src="imagem f 6.png" alt="Telinhas Arquetípicas4" class="mockup-img" loading="lazy">
-        
-                    </div>
-                    
-                    <div class="entregas-list">
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.1s">
-                            <i class="fa-solid fa-book-open"></i>
-                            <div>
-                                <h4>Análise Personalizada</h4>
-                                <p>Da sua história e momento atual.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.15s">
-                            <i class="fa-solid fa-moon"></i>
-                            <div>
-                                <h4>Mapa Astral Interpretado</h4>
-                                <p>Focado em raízes e potenciais.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.2s">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <div>
-                                <h4>Tiragem Exclusiva de Tarô</h4>
-                                <p>Para clareza e confirmação.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.25s">
-                            <i class="fa-solid fa-headphones"></i>
-                            <div>
-                                <h4>Áudios Explicativos</h4>
-                                <p>Para ouvir e reouvir sempre.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.3s">
-                            <i class="fa-solid fa-file-pdf"></i>
-                            <div>
-                                <h4>PDF de Alinhamento</h4>
-                                <p>Arquetípico documentado.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.35s">
-                            <i class="fa-solid fa-anchor"></i>
-                            <div>
-                                <h4>Guia de Ancoramento</h4>
-                                <p>Práticas e exercícios diários.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.4s">
-                            <i class="fa-solid fa-mobile-screen"></i>
-                            <div>
-                                <h4>Telinha Personalizada</h4>
-                                <p>O arquétipo no seu celular.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.45s">
-                            <i class="fa-solid fa-scroll"></i>
-                            <div>
-                                <h4>Decreto Exclusivo</h4>
-                                <p>Mantras de ativação.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.5s">
-                            <i class="fa-solid fa-spa"></i>
-                            <div>
-                                <h4>Prática de Ho'oponopono</h4>
-                                <p>Limpeza de memórias.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.55s">
-                            <i class="fa-regular fa-image"></i>
-                            <div>
-                                <h4>Imagens dos Arquétipos</h4>
-                                <p>Para visualização potente.</p>
-                            </div>
-                        </div>
-                        <div class="entrega-card reveal fade-left" style="transition-delay: 0.6s">
-                            <i class="fa-solid fa-calendar-check"></i>
-                            <div>
-                                <h4>Plano de Aplicação</h4>
-                                <p>Para os primeiros sete dias.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="center-cta reveal fade-up">
-                    <a href="#" class="cta-button checkout-btn">Quero reservar minha vaga</a>
-                </div>
-            </div>
-        </section>
+<!-- DEPOIMENTOS -->
+<section class="secao secao-clara">
+  <h2>Veja o depoimento real de quem já realizou</h2>
+  <div class="subtitulo">Histórias reais de pessoas que encontraram clareza e direção através do Direcionamento Arquetípico.</div>
+  
+  <div class="grid-depoimentos">
+    <div class="depoimento"><img src="4.png" alt="Depoimento 1"></div>
+    <div class="depoimento"><img src="5.png" alt="Depoimento 2"></div>
+    <div class="depoimento"><img src="6.png" alt="Depoimento 3"></div>
+    <div class="depoimento"><img src="7.png" alt="Depoimento 4"></div>
+    <div class="depoimento"><img src="8.png" alt="Depoimento 5"></div>
+    <div class="depoimento"><img src="9.png" alt="Depoimento 6"></div>
+  </div>
+</section>
 
-        <!-- 5. DEPOIMENTOS -->
-        <section id="depoimentos" class="depoimentos">
-            <div class="container">
-                <div class="section-header reveal fade-up">
-                    <h2>Mais de mil consulentes já passaram por esse <span>processo de transformação.</span></h2>
-                </div>
-                
-                <div class="carousel-container reveal fade-up">
-                    <div class="carousel">
-                        <<img src="imagem%204.png" alt="Depoimento 1" loading="lazy">
-                        <img src="imagem%205.png" alt="Depoimento 2" loading="lazy">
-                        <img src="imagem%206.png" alt="Depoimento 3" loading="lazy">
-                        <img src="imagem%207.png" alt="Depoimento 4" loading="lazy">
-                        <img src="imagem%208.png" alt="Depoimento 5" loading="lazy">
-                        <img src="imagem%209.png" alt="Depoimento 6" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- O QUE VOCÊ RECEBE -->
+<section class="secao secao-roxa">
+  <h2>O que você recebe ao adquirir</h2>
+  <div class="subtitulo">Um material completo, feito especialmente para você, com tudo o que precisa para começar sua transformação.</div>
 
-        <!-- 6. INVESTIMENTO -->
-        <section id="investimento" class="investimento">
-            <div class="container">
-                <div class="investment-intro reveal fade-up">
-                    <i class="fa-solid fa-quote-left quote-icon"></i>
-                    <p>Cada atendimento é desenvolvido individualmente.<br>Durante vários dias analiso cuidadosamente sua história, seu mapa astral, realizo a tiragem personalizada do Tarô e elaboro materiais exclusivos para que você tenha um direcionamento completo, claro e aplicável.<br><br>Por isso, atendo um número limitado de pessoas por mês.</p>
-                </div>
-                
-                <div class="investment-card glass-panel reveal fade-up">
-                    <div class="card-inner">
-                        <h3>Direcionamento Arquetípico <span>Completo</span></h3>
-                        
-                        <div class="investment-features">
-                            <ul>
-                                <li><i class="fa-solid fa-star"></i> Mapa Astral</li>
-                                <li><i class="fa-solid fa-star"></i> Tarô Personalizado</li>
-                                <li><i class="fa-solid fa-star"></i> Áudios exclusivos</li>
-                            </ul>
-                            <ul>
-                                <li><i class="fa-solid fa-star"></i> PDFs personalizados</li>
-                                <li><i class="fa-solid fa-star"></i> Plano de ação</li>
-                                <li><i class="fa-solid fa-star"></i> Materiais complementares</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="price-box">
-                            <span class="price-label">Investimento</span>
-                            <div class="price-cash">R$269,90 <span class="suffix">à vista</span></div>
-                            <div class="price-term">ou 12x de R$ 27,91</div>
-                        </div>
-                        
-                        <a href="#" class="cta-button checkout-btn">Garantir Meu Atendimento</a>
-                        
-                        <div class="investment-footer">
-                            <p>Mais do que uma consulta, este é um processo personalizado de autoconhecimento e direcionamento, construído exclusivamente para você.</p>
-                            <div class="scarcity-badge"><i class="fa-solid fa-gem"></i> Somente 8 vagas disponíveis por mês</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. PERGUNTAS FREQUENTES -->
-        <section id="faq" class="faq">
-            <div class="container">
-                <div class="section-header reveal fade-up">
-                    <h2>Perguntas <span>Frequentes</span></h2>
-                </div>
-                
-                <div class="accordion reveal fade-up">
-                    <div class="accordion-item">
-                        <button class="accordion-header">Como funciona o atendimento? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="accordion-content">
-                            <p>Após a confirmação do pagamento, você preencherá um formulário detalhado. Com base nisso, farei o cruzamento do seu Mapa Astral e a tiragem de Tarô, criando todo o material personalizado que será entregue a você no prazo combinado.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Preciso entender de Tarô? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="accordion-content">
-                            <p>Não. Toda a linguagem utilizada no material é clara, acessível e focada na aplicação prática para a sua vida, sem jargões complexos.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Quando recebo o material? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="accordion-content">
-                            <p>Você recebe o material completo dentro do prazo de até 7 dias, pelo seu WhatsApp ou e-mail.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header">Posso direcionar para qualquer área da minha vida? <i class="fa-solid fa-chevron-down"></i></button>
-                        <div class="accordion-content">
-                            <p>Sim! No formulário inicial, você indicará qual área deseja focar (relacionamentos, carreira, finanças, desenvolvimento pessoal, etc.), e toda a análise será aprofundada nesse tema.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. CTA FINAL -->
-        <section id="cta-final" class="cta-final">
-            <div class="container">
-                <div class="final-box glass-panel reveal fade-up">
-                    <img src="imagem 1.png" alt="Érika" class="author-img" loading="lazy">
-                    
-                    <h2 class="final-dilemma">
-                        Você pode continuar convivendo com os mesmos padrões...<br>
-                        <span>...ou escolher compreender a origem deles e iniciar uma transformação consciente.</span>
-                    </h2>
-                    
-                    <p class="final-desc">O primeiro passo começa quando você decide olhar para sua história com profundidade.<br>Se este é o seu momento, será um prazer caminhar com você nesse processo.</p>
-                    
-                    <a href="#" class="cta-button checkout-btn">Quero iniciar meu Direcionamento Arquetípico</a>
-                    
-                    <p class="final-scarcity"><i class="fa-solid fa-lock"></i> Apenas 8 atendimentos são disponibilizados por mês.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">Érika <span>| Vida Arquetípica</span></div>
-                <p>&copy; 2026 Todos os direitos reservados.</p>
-                <p class="disclaimer">Este atendimento tem finalidade de autoconhecimento e desenvolvimento pessoal. Não substitui acompanhamento médico, psicológico ou psiquiátrico.</p>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#" class="floating-whatsapp checkout-btn" aria-label="Falar no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    
-    <div class="sticky-mobile-cta">
-        <a href="#" class="cta-button checkout-btn">Agendar Sessão</a>
+  <div class="grid-beneficios">
+    <div class="beneficio">
+      <div class="beneficio-titulo">
+        <div class="icone">✦</div>
+        Análise Completa de Mapa Astral
+      </div>
+      <p>Análise completa em áudios e PDFs explicando os pontos mais importantes do seu Mapa Astral: bloqueios, feridas, ciclos repetitivos, o que você precisa curar, suas potências, dons, talentos e o que mais precisa desenvolver para transformar sua vida.</p>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const KIWIFY_LINK = "https://pay.kiwify.com.br/2Ar7zHl";
-            
-            const checkoutButtons = document.querySelectorAll('.checkout-btn');
-            checkoutButtons.forEach(btn => {
-                btn.href = KIWIFY_LINK;
-                btn.target = "_blank";
-                btn.rel = "noopener noreferrer";
-            });
+    <div class="beneficio">
+      <div class="beneficio-titulo">
+        <div class="icone">◈</div>
+        Clareza sobre os Bloqueios
+      </div>
+      <p>Você descobre o que realmente está causando o bloqueio e estagnação em sua vida e encontra direção e clareza para mudar sua situação atual de uma vez por todas.</p>
+    </div>
 
-            const header = document.querySelector('.header');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
+    <div class="beneficio">
+      <div class="beneficio-titulo">
+        <div class="icone">❋</div>
+        Confirmação Completa com Tarô
+      </div>
+      <p>Além do mapa astral, também realizo confirmações com o tarô para entender melhor os caminhos mais disponíveis para você, passando uma clareza e direção ainda mais completa e personalizada.</p>
+    </div>
 
-            const revealElements = document.querySelectorAll('.reveal');
-            const revealOnScroll = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-            
-            revealElements.forEach(el => revealOnScroll.observe(el));
+    <div class="beneficio">
+      <div class="beneficio-titulo">
+        <div class="icone">✧</div>
+        Combo de Arquétipos Personalizado
+      </div>
+      <p>Os arquétipos mais indicados para transformar sua realidade e desenvolver sua maior potência. Você também recebe a telinha personalizada desses arquétipos e o decreto potente de ativação para ativar da forma correta.</p>
+    </div>
 
-            const accordions = document.querySelectorAll('.accordion-header');
-            accordions.forEach(acc => {
-                acc.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    const panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    }
-                });
-            });
-        });
-    </script>
+    <div class="beneficio">
+      <div class="beneficio-titulo">
+        <div class="icone">♥</div>
+        Suporte Direto pelo WhatsApp
+      </div>
+      <p>Após toda a análise você também pode tirar todas as suas dúvidas diretamente comigo online pelo WhatsApp — estou aqui para te acompanhar neste início de caminho.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA DE MATERIAIS -->
+<section class="secao">
+  <h2>Materiais que você receberá</h2>
+  <div class="subtitulo">Conteúdo visual, organizado e feito com muito cuidado para o seu processo.</div>
+  
+  <div class="grid-galeria">
+    <div class="galeria-item"><img src="imagem f 2.png" alt="Material 1"></div>
+    <div class="galeria-item"><img src="imagem f 3.png" alt="Material 2"></div>
+    <div class="galeria-item"><img src="imagem f 4.png" alt="Material 3"></div>
+    <div class="galeria-item"><img src="imagem f 5.png" alt="Material 4"></div>
+    <div class="galeria-item"><img src="imagem f 6.png" alt="Material 5"></div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="secao secao-clara">
+  <h2>Como funciona o processo</h2>
+  <div class="subtitulo">Simples, humano e completamente personalizado para você.</div>
+
+  <div class="passos">
+    <div class="passo">
+      <div class="numero-passo">1</div>
+      <h3>Solicite sua análise</h3>
+      <p>Realize a solicitação da sua análise e efetue a confirmação do pagamento de forma segura.</p>
+    </div>
+    <div class="passo">
+      <div class="numero-passo">2</div>
+      <h3>Preencha o formulário</h3>
+      <p>Após o pagamento você recebe por e-mail ou WhatsApp um formulário para contar tudo o que está vivenciando.</p>
+    </div>
+    <div class="passo">
+      <div class="numero-passo">3</div>
+      <h3>Receba seu direcionamento</h3>
+      <p>Realizo sua análise completa e em até 7 dias envio tudo para o seu WhatsApp: materiais, áudios e complementos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTIMENTO -->
+<section class="secao">
+  <h2>Valor do Investimento</h2>
+  <div class="subtitulo">Uma oportunidade de se encontrar e construir a vida que realmente deseja.</div>
+
+  <div class="card-investimento">
+    <div class="vagas">⚡ Restam apenas 5 vagas disponíveis</div>
+    <div class="preco-de">De R$ 397,00</div>
+    <div class="preco-por">R$ 269,90</div>
+    <div class="preco-parcelado">ou 12x de R$ 27,91</div>
+    <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado">Quero Garantir Minha Vaga</a>
+    <p style="margin-top:24px;color:var(--texto-claro);font-size:14px;">Pagamento 100% seguro • Acesso ao suporte incluso</p>
+  </div>
+
+  <div class="divisoria"></div>
+
+  <div class="proposito">
+    <p>
+      Este é o atendimento mais indicado para quem busca mudanças reais e deseja compreender com profundidade os desafios que está vivendo.<br><br>
+      <span class="roxo" style="font-weight:500;">Meu propósito não é apenas responder perguntas</span>, mas ajudar você a compreender seus desafios, identificar caminhos possíveis e desenvolver as energias necessárias para construir a vida que deseja.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="secao secao-clara">
+  <h2>Perguntas frequentes</h2>
+  <div class="subtitulo">Tire suas principais dúvidas antes de agendar.</div>
+
+  <div class="faq">
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        Preciso ter conhecimento de Mapa Astral ou Arquétipos?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        Não é necessário! Todo o material é explicado de forma simples, clara e acessível. Você receberá tudo já mastigado para entender exatamente o que cada ponto significa para a sua vida.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        Em quanto tempo recebo o meu Direcionamento?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        O prazo para entrega completa é de até 7 dias corridos após o recebimento do seu formulário preenchido. Todo o conteúdo é enviado diretamente para o seu WhatsApp.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        Como envio meus dados para a análise?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        Logo após a confirmação do pagamento, você recebe automaticamente um link por e-mail e WhatsApp com um formulário simples, onde preenche seus dados de nascimento e compartilha o que está vivenciando no momento.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        Posso tirar dúvidas depois de receber o material?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        Sim! Após receber toda a sua análise, você pode tirar todas as suas dúvidas diretamente comigo pelo WhatsApp. Estou aqui para te acompanhar e garantir que tudo fique muito claro.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-pergunta">
+        O pagamento é seguro?
+        <span class="faq-seta">+</span>
+      </button>
+      <div class="faq-resposta">
+        Totalmente seguro. O checkout é realizado pela Kiwify, plataforma certificada com criptografia de ponta a ponta e proteção de dados bancários.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="secao" style="text-align: center;">
+  <h2>Está pronta para encontrar<br>a sua direção? ✨</h2>
+  <div class="subtitulo">Sua versão mais potente já existe dentro de você — basta resgatá-la.</div>
+  <a href="https://pay.kiwify.com.br/2Ar7zHl" target="_blank" class="btn-principal btn-dourado" style="font-size:18px;padding:18px 56px;">Agendar Minha Sessão</a>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--verde-musgo);margin-bottom:8px;">Vida Arquetípica</div>
+  <p>© 2026 Todos os direitos reservados • Feito com ♥ e muita dedicação</p>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/message/HYCA7N7T73X4N1" target="_blank" class="whatsapp-flutuante" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.445-.547-.515-.995-1.104-1.39-1.724a.63.63 0 0 1 .096-.76c.253-.327.49-.626.688-.94.116-.183.25-.446.065-.667-.214-.255-.58-.39-.9-.465a3.42 3.42 0 0 0-.97-.037c-.49.073-1.144.327-1.75.857-1.49 1.29-2.218 3.26-2.14 5.19.04 1.03.37 2.11 1.008 3.06.89 1.33 2.48 2.31 4.28 2.66 1.73.34 3.47.1 4.97-.66 1.24-.63 2.26-1.6 2.88-2.82.28-.57.42-1.15.45-1.72.02-.42-.06-.83-.3-1.14-.3-.4-.85-.63-1.46-.64-.24 0-.48.04-.7.13-.22.08-.58.32-.75.4-.17.08-.3.09-.47.02zm-3.1 8.37c-1.54 0-3.04-.42-4.34-1.21-.5-.3-.97-.67-1.38-1.1l-.32-.34-.5 1.85 1.9-.5-.35-.36c-.46-.5-.83-1.06-1.1-1.68-.68-1.57-.6-3.4.22-4.88.4-.7.96-1.3 1.64-1.76 1.37-.93 3.14-1.2 4.77-.74.57.16 1.1.42 1.57.76l.3.23-1.68.94-.28-.18a3.12 3.12 0 0 0-1.5-.38c-.46-.02-.93.1-1.33.33-.7.4-1.18 1.05-1.34 1.8-.17.78-.03 1.6.4 2.28.2.3.44.58.72.82l.3.25-.38 1.4.25.3c.34.4.74.74 1.18 1 .57.34 1.2.57 1.85.68.78.13 1.58.07 2.32-.18.46-.16.9-.38 1.3-.66l.26-.18 1.55.86-.26.3c-.63.72-1.42 1.3-2.32 1.72-.96.45-2 .67-3.05.66zM16 2C8.3 2 2 8.3 2 16c0 2.5.7 4.8 1.9 6.7L2 30l7.5-1.8A13.9 13.9 0 0 0 16 30c7.7 0 14-6.3 14-14S23.7 2 16 2z"/></svg>
+</a>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-pergunta').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const estavaAtivo = item.classList.contains('ativo');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('ativo'));
+      if (!estavaAtivo) item.classList.add('ativo');
+    });
+  });
+</script>
+
 </body>
 </html>
