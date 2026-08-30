@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direcionamento Arquetípico Completo | Érika Vida Arquetípica</title>
-    <meta name="description" content="Descubra os arquétipos que realmente irão transformar sua vida. Atendimento completo com Mapa Astral, Tarô e suporte exclusivo.">
+    <meta name="description" content="Descubra os arquétipos que fazem sentido para você e para a fase da vida que deseja transformar. Atendimento personalizado com Mapa Astral e Tarô.">
     
-    <!-- Fontes simples e elegantes -->
+    <!-- Fontes elegantes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração de cores personalizadas -->
+    <!-- Configuração de cores -->
     <script>
         tailwind.config = {
             theme: {
@@ -75,17 +75,17 @@
             font-family: 'Lora', serif;
         }
         .sombra-suave {
-            box-shadow: 0 10px 40px -12px rgba(59, 83, 59, 0.15);
+            box-shadow: 0 10px 30px -10px rgba(59, 83, 59, 0.12);
         }
         .gradiente-fundo {
-            background: linear-gradient(180deg, #fbfaf7 0%, #f4f7f4 50%, #f7f5fa 100%);
+            background: linear-gradient(180deg, #fbfaf7 0%, #f4f7f4 50%, #fbfaf7 100%);
         }
         .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
         .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(59, 83, 59, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -10px rgba(59, 83, 59, 0.15);
         }
         .whatsapp-flutuante {
             animation: pulso 2s infinite;
@@ -93,17 +93,6 @@
         @keyframes pulso {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.05); }
-        }
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: aparecer 0.8s ease forwards;
-        }
-        @keyframes aparecer {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         details > summary {
             list-style: none;
@@ -116,165 +105,278 @@
 </head>
 <body class="gradiente-fundo">
 
-    <!-- BOTÃO FIXO SUPERIOR - INICIAR DIRECIONAMENTO -->
-    <div class="fixed top-0 left-0 right-0 z-40 bg-white/85 backdrop-blur-md border-b border-musgo-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- BARRA FIXA SUPERIOR -->
+    <div class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-musgo-100 shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <svg class="w-6 h-6 text-dourado-500" fill="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-dourado-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
                 </svg>
-                <span class="fonte-acento text-musgo-800 font-medium text-sm md:text-base">Vida Arquetípica</span>
+                <span class="fonte-acento text-musgo-800 font-semibold text-sm md:text-base">Vida Arquetípica</span>
             </div>
             <a href="#formulario-dados" 
-               class="bg-musgo-700 hover:bg-musgo-800 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                </svg>
-                Iniciar Direcionamento
+               class="bg-musgo-700 hover:bg-musgo-800 text-white px-5 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 shadow-sm hover:shadow">
+                QUERO MEU DIRECIONAMENTO
             </a>
         </div>
     </div>
 
-    <!-- ESPAÇO PARA O MENU FIXO -->
-    <div class="h-16"></div>
+    <!-- ESPAÇADOR MENU FIXO -->
+    <div class="h-14"></div>
 
-    <main class="max-w-4xl mx-auto px-4">
+    <main class="max-w-3xl mx-auto px-4">
 
-        <!-- HERO - TÍTULO E APRESENTAÇÃO -->
-        <section class="py-12 md:py-20 text-center fade-in">
-            <div class="inline-flex items-center gap-2 bg-dourado-50 text-dourado-700 px-4 py-1.5 rounded-full text-xs font-medium mb-6 border border-dourado-100">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
-                </svg>
-                Atendimento Personalizado
-            </div>
-            
-            <h1 class="fonte-acento text-3xl md:text-5xl text-musgo-900 font-semibold leading-tight mb-6">
-                Direcionamento Arquetípico Completo <br class="hidden md:block">
-                <span class="text-roxo-600">com Mapa Astral</span>
-                <svg class="inline-block w-7 h-7 md:w-9 md:h-9 ml-2 text-dourado-500 mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
-                </svg>
+        <!-- 1. HERO - PRIMEIRA TELA -->
+        <section class="pt-10 pb-8 text-center">
+            <h1 class="fonte-acento text-3xl md:text-5xl text-musgo-900 font-bold leading-tight mb-4">
+                Direcionamento Arquetípico Completo
             </h1>
             
-            <p class="text-lg md:text-xl text-musgo-700 max-w-2xl mx-auto leading-relaxed fonte-acento italic mb-6">
-                Existe uma versão sua pronta para se manifestar. Quando você reconhece e ativa essa potência, sua jornada ganha clareza, confiança e movimento.
+            <p class="fonte-acento text-lg md:text-xl text-roxo-600 font-medium max-w-xl mx-auto mb-6">
+                Descubra quais arquétipos fazem sentido para você e para a fase da vida que deseja transformar.
+            </p>
+            
+            <p class="text-base text-musgo-700 max-w-xl mx-auto leading-relaxed mb-8">
+                Eu uno Mapa Astral, Tarô e análise arquetípica para criar um direcionamento feito especialmente para você — e não uma indicação genérica de arquétipos.
             </p>
 
-            <div class="inline-block bg-white/80 backdrop-blur-sm border border-musgo-200 text-musgo-800 text-sm md:text-base px-6 py-3 rounded-2xl shadow-sm max-w-xl mx-auto">
-                ✨ Identifique padrões e bloqueios, resgate suas forças e descubra os arquétipos ideais para o seu momento atual.
-            </div>
+            <a href="#formulario-dados" 
+               class="inline-block bg-dourado-500 hover:bg-dourado-400 text-musgo-900 font-bold px-8 py-4 rounded-2xl text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.01] mb-3">
+                ✨ QUERO MEU DIRECIONAMENTO
+            </a>
+
+            <p class="text-xs text-musgo-600 font-medium">
+                Atendimento personalizado • Entrega em até 5 dias úteis
+            </p>
         </section>
 
-        <!-- IMAGEM PRINCIPAL -->
-        <section class="mb-16 md:mb-24 fade-in" style="animation-delay: 0.2s">
-            <div class="rounded-3xl overflow-hidden sombra-suave border border-musgo-100">
+        <!-- FOTO PRINCIPAL -->
+        <section class="mb-14">
+            <div class="rounded-3xl overflow-hidden sombra-suave border border-musgo-100 max-w-2xl mx-auto">
                 <img src="imagem 1.png" 
-                     alt="Direcionamento Arquetípico - Érika" 
+                     alt="Érika - Vida Arquetípica" 
                      class="w-full h-auto object-cover"
                      loading="eager">
             </div>
         </section>
 
-        <!-- PARA QUEM É ESTE ATENDIMENTO -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.3s">
-            <div class="text-center mb-12">
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                    Este direcionamento é para você que:
+        <!-- 2. UMA EXPLICAÇÃO MUITO SIMPLES -->
+        <section class="mb-14 text-center">
+            <div class="bg-white rounded-3xl p-7 md:p-10 border border-musgo-100 sombra-suave">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-4">
+                    Por que um direcionamento personalizado?
                 </h2>
-                <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full"></div>
+                <p class="text-musgo-700 leading-relaxed mb-6 max-w-xl mx-auto">
+                    Na internet você encontra centenas de arquétipos e pode ficar sem saber qual escolher.
+                    <br><br>
+                    Aqui, o caminho é diferente. Primeiro eu analiso você, o seu momento e aquilo que deseja transformar. Depois, indico os arquétipos que mais fazem sentido para o que você busca desenvolver.
+                </p>
+                <div class="inline-block bg-dourado-50 border border-dourado-200 text-dourado-700 font-semibold px-6 py-3 rounded-2xl text-sm md:text-base">
+                    Você não recebe uma lista pronta. Recebe um direcionamento pensado para você.
+                </div>
             </div>
+        </section>
 
-            <div class="space-y-5">
-                <!-- Item 1 -->
-                <div class="bg-white rounded-2xl p-6 md:p-7 card border border-musgo-100 flex gap-5">
-                    <div class="flex-shrink-0 w-11 h-11 rounded-full bg-musgo-50 text-musgo-600 flex items-center justify-center border border-musgo-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-musgo-800 leading-relaxed">
-                            Está vivenciando <em class="text-roxo-600 not-italic font-medium">padrões repetitivos</em> em sua vida — nos relacionamentos, no dinheiro, no trabalho — e busca entender como transformar esse ciclo.
-                        </p>
-                    </div>
+        <!-- 3. O QUE VOCÊ PODE BUSCAR TRANSFORMAR -->
+        <section class="mb-14 text-center">
+            <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-2">
+                O que você deseja fortalecer na sua vida?
+            </h2>
+            <div class="w-12 h-0.5 bg-dourado-400 mx-auto rounded-full mb-8"></div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Prosperidade e dinheiro
                 </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white rounded-2xl p-6 md:p-7 card border border-musgo-100 flex gap-5">
-                    <div class="flex-shrink-0 w-11 h-11 rounded-full bg-roxo-50 text-roxo-600 flex items-center justify-center border border-roxo-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-musgo-800 leading-relaxed">
-                            Percebe <em class="text-roxo-600 not-italic font-medium">bloqueios frequentes</em> em áreas importantes… e deseja <em class="text-roxo-600 not-italic font-medium">identificar os principais fatores e origens</em> relacionados a essas dificuldades.
-                        </p>
-                    </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Amor e relacionamentos
                 </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white rounded-2xl p-6 md:p-7 card border border-musgo-100 flex gap-5">
-                    <div class="flex-shrink-0 w-11 h-11 rounded-full bg-dourado-50 text-dourado-600 flex items-center justify-center border border-dourado-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-musgo-800 leading-relaxed">
-                            Já tentou ativar arquétipos antes, estudou, mas <em class="text-roxo-600 not-italic font-medium">ainda não sentiu os resultados esperados</em> por falta de um direcionamento individualizado.
-                        </p>
-                    </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Autoestima e confiança
                 </div>
-
-                <!-- Item 4 -->
-                <div class="bg-white rounded-2xl p-6 md:p-7 card border border-musgo-100 flex gap-5">
-                    <div class="flex-shrink-0 w-11 h-11 rounded-full bg-musgo-50 text-musgo-600 flex items-center justify-center border border-musgo-100">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-musgo-800 leading-relaxed">
-                            Deseja finalmente descobrir <em class="text-roxo-600 not-italic font-medium">quais arquétipos se alinham exatamente à sua energia e aos seus objetivos atuais</em>.
-                        </p>
-                    </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Coragem e atitude
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Poder pessoal
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Sucesso e realização
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Comunicação e presença
+                </div>
+                <div class="bg-white rounded-2xl p-4 border border-musgo-100 text-sm font-medium text-musgo-800 card flex items-center justify-center text-center">
+                    ✨ Novas oportunidades
                 </div>
             </div>
 
-            <p class="text-center mt-12 text-lg text-musgo-700 fonte-acento max-w-2xl mx-auto leading-relaxed">
-                Quando você compreende a lógica por trás da estagnação, dos desafios financeiros ou dos relacionamentos — é exatamente aí que a mudança ganha direção…
+            <p class="text-sm text-musgo-600 italic">
+                O direcionamento é personalizado de acordo com o que você está vivendo e com aquilo que deseja desenvolver.
             </p>
         </section>
 
-        <!-- COMO FUNCIONA - INTRODUÇÃO -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.4s">
-            <div class="bg-gradient-to-br from-musgo-50 via-white to-roxo-50 rounded-3xl p-8 md:p-12 border border-musgo-100 sombra-suave">
-                <div class="text-center mb-8">
-                    <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                        Como Funciona
-                    </h2>
-                    <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full"></div>
-                </div>
-                <p class="text-lg text-musgo-800 text-center leading-relaxed max-w-2xl mx-auto">
-                    Neste atendimento, investigamos <strong class="text-musgo-900 font-medium">os principais fatores que podem estar desacelerando o seu progresso</strong> e quais energias precisam ser trabalhadas para que você siga com clareza e poder.
+        <!-- 4. O GRANDE DIFERENCIAL -->
+        <section class="mb-14 text-center">
+            <div class="bg-gradient-to-br from-roxo-50 to-musgo-50 rounded-3xl p-7 md:p-10 border border-roxo-100">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-4">
+                    Não é simplesmente escolher um arquétipo.
+                </h2>
+                <p class="text-musgo-700 leading-relaxed max-w-xl mx-auto mb-8">
+                    Um arquétipo pode representar força, coragem, prosperidade, liderança, sensualidade, sabedoria, criatividade e muitas outras características.
+                    <br><br>
+                    Mas a pergunta é: <strong>quais dessas características você realmente precisa fortalecer agora?</strong> É isso que buscamos entender no seu direcionamento.
                 </p>
+
+                <div class="grid md:grid-cols-3 gap-3 text-center">
+                    <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-musgo-100 font-semibold text-musgo-800 text-sm">
+                        1. Primeiro eu analiso.
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-musgo-100 font-semibold text-musgo-800 text-sm">
+                        2. Depois eu direciono.
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-musgo-100 font-semibold text-musgo-800 text-sm">
+                        3. Você recebe seus arquétipos.
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- DEPOIMENTOS -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.5s">
-            <div class="text-center mb-12">
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                    Quem já encontrou sua direção
+        <!-- 5. O QUE VOCÊ RECEBE -->
+        <section class="mb-14">
+            <div class="text-center mb-8">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-2">
+                    O que você recebe no seu direcionamento
                 </h2>
-                <p class="text-musgo-600">Depoimentos reais de transformação</p>
-                <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full mt-3"></div>
+                <p class="text-musgo-600 font-medium">Um material completo, feito especialmente para você.</p>
+                <div class="w-12 h-0.5 bg-dourado-400 mx-auto rounded-full mt-3"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">🌙</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">MAPA ASTRAL</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Uma análise dos principais pontos do seu mapa, observando características, forças, desafios e aspectos importantes para o momento que você está vivendo.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">🔮</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">TARÔ</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Uma leitura complementar para aprofundar a compreensão do seu momento atual e das questões que você deseja trabalhar.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">👑</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">ARQUÉTIPOS PERSONALIZADOS</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Os arquétipos são escolhidos de acordo com a análise realizada e com aquilo que você deseja transformar ou desenvolver.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">📖</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">PDF PERSONALIZADO</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Você recebe um material escrito com as principais informações do seu direcionamento, explicações e orientações para poder consultar novamente quando quiser.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">🎧</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">ÁUDIOS EXPLICATIVOS</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Além do PDF, você recebe áudios personalizados com explicações detalhadas sobre a sua análise e o seu direcionamento.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white rounded-2xl p-6 border border-musgo-100 card">
+                    <div class="text-2xl mb-2">✨</div>
+                    <h3 class="fonte-acento font-semibold text-lg text-musgo-900 mb-2">ORIENTAÇÃO COMPLETA</h3>
+                    <p class="text-sm text-musgo-700 leading-relaxed">
+                        Você não recebe apenas “qual arquétipo usar”. Eu explico o motivo das indicações e como elas se relacionam com aquilo que você deseja trabalhar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-musgo-50 border border-musgo-200 rounded-2xl p-5 text-center text-sm md:text-base text-musgo-800 font-medium">
+                É um direcionamento completo para você entender o que está sendo indicado, por que foi indicado e como começar a trabalhar essas características na sua vida.
+            </div>
+        </section>
+
+        <!-- 6. DEIXAR MUITO CLARO O VALOR -->
+        <section class="mb-14 text-center">
+            <div class="bg-white rounded-3xl p-7 md:p-10 border border-musgo-100 sombra-suave">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-4">
+                    Um direcionamento feito para você
+                </h2>
+                <p class="text-musgo-700 leading-relaxed max-w-xl mx-auto mb-6">
+                    Cada análise é preparada individualmente.
+                    <br><br>
+                    Eu analiso suas informações, seu Mapa Astral, realizo a leitura complementar de Tarô e, a partir disso, preparo seu direcionamento arquetípico.
+                    <br><br>
+                    Você recebe todo esse conteúdo organizado em PDF e áudios explicativos para poder ouvir, compreender e consultar novamente quando quiser.
+                </p>
+
+                <div class="inline-flex flex-col gap-2 bg-roxo-50 border border-roxo-100 p-5 rounded-2xl text-roxo-700 font-medium text-sm md:text-base">
+                    <span>✨ Não é uma resposta automática.</span>
+                    <span>✨ Não é uma lista pronta.</span>
+                    <span class="font-bold text-roxo-800">✨ É um trabalho personalizado.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. COMO FUNCIONA -->
+        <section class="mb-14 text-center">
+            <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-2">
+                Como Funciona
+            </h2>
+            <div class="w-12 h-0.5 bg-dourado-400 mx-auto rounded-full mb-8"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white rounded-2xl p-5 border border-musgo-100 card text-left">
+                    <span class="text-xs font-bold text-dourado-600 tracking-wider uppercase">Passo 1</span>
+                    <h3 class="fonte-acento font-semibold text-musgo-900 my-1">VOCÊ COMPRA</h3>
+                    <p class="text-xs text-musgo-600">Realiza o pagamento de R$ 269,90.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-musgo-100 card text-left">
+                    <span class="text-xs font-bold text-dourado-600 tracking-wider uppercase">Passo 2</span>
+                    <h3 class="fonte-acento font-semibold text-musgo-900 my-1">ENVIA SEUS DADOS</h3>
+                    <p class="text-xs text-musgo-600">Preenche as informações necessárias para a análise.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-musgo-100 card text-left">
+                    <span class="text-xs font-bold text-dourado-600 tracking-wider uppercase">Passo 3</span>
+                    <h3 class="fonte-acento font-semibold text-musgo-900 my-1">EU FAÇO A ANÁLISE</h3>
+                    <p class="text-xs text-musgo-600">Analiso seu Mapa Astral, Tarô e objetivos.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 border border-musgo-100 card text-left">
+                    <span class="text-xs font-bold text-dourado-600 tracking-wider uppercase">Passo 4</span>
+                    <h3 class="fonte-acento font-semibold text-musgo-900 my-1">VOCÊ RECEBE</h3>
+                    <p class="text-xs text-musgo-600">Seu PDF e áudios em até 5 dias úteis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. DEPOIMENTOS -->
+        <section class="mb-14 text-center">
+            <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-2">
+                Quem já recebeu seu direcionamento
+            </h2>
+            <p class="text-sm text-musgo-600 mb-6">Veja algumas experiências de quem já passou por esse processo.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <img src="imagem 4.png" alt="Depoimento 1" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card border border-musgo-50">
                 <img src="imagem 5.png" alt="Depoimento 2" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card border border-musgo-50">
                 <img src="imagem 6.png" alt="Depoimento 3" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card border border-musgo-50">
@@ -284,228 +386,38 @@
             </div>
         </section>
 
-        <!-- O QUE VOCÊ RECEBE -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.6s">
-            <div class="text-center mb-12">
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                    O que você recebe
-                </h2>
-                <p class="text-musgo-600">Um direcionamento completo, profundo e personalizado</p>
-                <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full mt-3"></div>
-            </div>
-
-            <div class="space-y-6 mb-14">
-                <!-- Item 1 -->
-                <div class="bg-white rounded-2xl p-7 md:p-8 card border border-musgo-100">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-musgo-700 text-white flex items-center justify-center">
-                            <span class="fonte-acento text-xl font-semibold">1</span>
-                        </div>
-                        <div>
-                            <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Análise Completa de Mapa Astral</h3>
-                            <p class="text-musgo-700 leading-relaxed">
-                                Em áudios e PDFs explicando os pontos essenciais: padrões, tendências, ciclos repetitivos, o que integrar em sua rotina, suas potências, dons e o que desenvolver para impulsionar seus objetivos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="bg-white rounded-2xl p-7 md:p-8 card border border-musgo-100">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-roxo-600 text-white flex items-center justify-center">
-                            <span class="fonte-acento text-xl font-semibold">2</span>
-                        </div>
-                        <div>
-                            <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Compreensão dos Seus Bloqueios</h3>
-                            <p class="text-musgo-700 leading-relaxed">
-                                Você entende os fatores e dinâmicas que costumam gerar estagnação ou desaceleração, ganhando clareza sobre como agir diferente.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="bg-white rounded-2xl p-7 md:p-8 card border border-musgo-100">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-dourado-500 text-white flex items-center justify-center">
-                            <span class="fonte-acento text-xl font-semibold">3</span>
-                        </div>
-                        <div>
-                            <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Confirmação com Tarô</h3>
-                            <p class="text-musgo-700 leading-relaxed">
-                                Uma leitura complementar com o Tarô para analisar caminhos e tendências disponíveis no momento, oferecendo uma orientação ainda mais precisa e segura.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="bg-white rounded-2xl p-7 md:p-8 card border border-musgo-100">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-musgo-700 text-white flex items-center justify-center">
-                            <span class="fonte-acento text-xl font-semibold">4</span>
-                        </div>
-                        <div>
-                            <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Combo de Arquétipos Personalizado</h3>
-                            <p class="text-musgo-700 leading-relaxed">
-                                Indicação exata dos arquétipos para o seu momento. Você recebe a arte personalizada para o seu celular e um <strong class="text-roxo-600 font-medium">decreto de ativação</strong> com instruções claras de aplicação.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="bg-white rounded-2xl p-7 md:p-8 card border border-musgo-100">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-roxo-600 text-white flex items-center justify-center">
-                            <span class="fonte-acento text-xl font-semibold">5</span>
-                        </div>
-                        <div>
-                            <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Suporte Direto no WhatsApp</h3>
-                            <p class="text-musgo-700 leading-relaxed">
-                                Após receber seu material completo, você tem <strong class="text-roxo-600 font-medium">espaço aberto no WhatsApp diretamente comigo</strong> para esclarecer qualquer dúvida sobre o seu direcionamento.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Imagens complementares do que recebe -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                <img src="imagem f 2.png" alt="Material do atendimento 1" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card">
-                <img src="imagem f 3.png" alt="Material do atendimento 2" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card">
-                <img src="imagem f 4.png" alt="Material do atendimento 3" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card">
-                <img src="imagem f 5.png" alt="Material do atendimento 4" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card">
-                <img src="imagem f 6.png" alt="Material do atendimento 5" loading="lazy" class="rounded-2xl sombra-suave w-full h-auto card col-span-2 md:col-span-1">
-            </div>
-        </section>
-
-        <!-- PASSO A PASSO + PREÇO + CTA -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.7s">
-            
-            <!-- Como funciona passo a passo -->
-            <div class="mb-14">
-                <div class="text-center mb-10">
-                    <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                        É simples assim
-                    </h2>
-                    <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full"></div>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Passo 1 -->
-                    <div class="bg-white rounded-2xl p-7 text-center card border border-musgo-100 relative">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-musgo-700 text-white flex items-center justify-center text-sm font-semibold">1</div>
-                        <div class="mt-4 mb-4 text-musgo-600">
-                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-                            </svg>
-                        </div>
-                        <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Preencha seus Dados</h3>
-                        <p class="text-musgo-700 text-sm leading-relaxed">
-                            Informe os dados do seu nascimento e conte um pouco sobre seu objetivo principal.
-                        </p>
-                    </div>
-
-                    <!-- Passo 2 -->
-                    <div class="bg-white rounded-2xl p-7 text-center card border border-musgo-100 relative">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-roxo-600 text-white flex items-center justify-center text-sm font-semibold">2</div>
-                        <div class="mt-4 mb-4 text-roxo-600">
-                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                            </svg>
-                        </div>
-                        <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Efetue o Pagamento</h3>
-                        <p class="text-musgo-700 text-sm leading-relaxed">
-                            Confirme seu pedido de forma 100% segura através do checkout da Kiwify.
-                        </p>
-                    </div>
-
-                    <!-- Passo 3 -->
-                    <div class="bg-white rounded-2xl p-7 text-center card border border-musgo-100 relative">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-dourado-500 text-white flex items-center justify-center text-sm font-semibold">3</div>
-                        <div class="mt-4 mb-4 text-dourado-600">
-                            <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="fonte-acento text-lg text-musgo-900 font-semibold mb-2">Receba seu Material</h3>
-                        <p class="text-musgo-700 text-sm leading-relaxed">
-                            Em até 5 dias úteis, entrego seu direcionamento completo diretamente no seu WhatsApp.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- QUADRO RESUMO DO QUE RECEBE -->
-            <div class="bg-white rounded-3xl p-6 md:p-8 border border-dourado-200 sombra-suave mb-10 max-w-2xl mx-auto text-left">
-                <p class="fonte-acento text-musgo-900 font-bold text-lg mb-4 text-center">AO FINAL, VOCÊ RECEBE:</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-musgo-800">
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Análise do seu Mapa Astral (PDF + Áudios)
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Leitura de Confirmação com Tarô
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Mapeamento de Padrões e Bloqueios
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Combo de Arquétipos + Decreto de Ativação
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Arte Personalizada para Tela do Celular
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="text-dourado-500 font-bold">✦</span> Suporte Direto Comigo pelo WhatsApp
-                    </div>
-                </div>
-                <div class="mt-4 pt-3 border-t border-musgo-100 text-center text-xs text-musgo-600 font-medium">
-                    ⏱️ Prazo de entrega: até 5 dias úteis no seu WhatsApp
-                </div>
-            </div>
-
-            <!-- CARD DE PREÇO E FORMULÁRIO -->
-            <div class="bg-gradient-to-br from-musgo-800 via-musgo-700 to-roxo-700 rounded-3xl p-6 md:p-12 text-white sombra-suave relative overflow-hidden">
+        <!-- 10. FORMULÁRIO COM ÁREA DE INVESTIMENTO COMPACTA -->
+        <section id="formulario-dados" class="mb-14">
+            <div class="bg-gradient-to-br from-musgo-900 via-musgo-800 to-roxo-900 rounded-3xl p-6 md:p-10 text-white sombra-suave max-w-xl mx-auto relative overflow-hidden">
                 <!-- Detalhe decorativo -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-dourado-400/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 <div class="absolute bottom-0 left-0 w-48 h-48 bg-roxo-400/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                 
                 <div class="relative z-10">
-                    <!-- Aviso de vagas -->
+                    <!-- CABEÇALHO DO INVESTIMENTO LIMPO -->
                     <div class="text-center mb-8">
-                        <div class="inline-flex items-center gap-2 bg-dourado-500/20 border border-dourado-400/30 text-dourado-200 px-5 py-2 rounded-full text-sm font-medium">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
-                            </svg>
-                            ⚡ Atendimento individual com vagas limitadas
-                        </div>
-                    </div>
-
-                    <div class="text-center mb-8">
-                        <p class="text-musgo-200 text-sm uppercase tracking-wider mb-2">Valor do Investimento</p>
-                        <div class="flex items-baseline justify-center gap-3 mb-2">
-                            <span class="text-musgo-300 line-through text-xl">de R$ 497,00</span>
-                            <span class="text-dourado-300 text-sm font-medium">por</span>
-                        </div>
-                        <div class="fonte-acento text-5xl md:text-6xl font-semibold text-white mb-2">
+                        <p class="text-musgo-200 text-xs font-semibold tracking-widest uppercase mb-1">Valor do Investimento</p>
+                        <div class="fonte-acento text-4xl md:text-5xl font-bold text-white mb-1">
                             R$ 269,90
                         </div>
-                        <p class="text-musgo-200 text-lg">ou 12x de <span class="text-dourado-300 font-semibold">R$ 27,91</span></p>
+                        <p class="text-musgo-200 text-sm mb-4">
+                            ou 12x de <span class="text-dourado-300 font-semibold">R$ 27,91</span>
+                        </p>
+                        <div class="inline-flex items-center gap-2 bg-dourado-500/20 border border-dourado-400/30 text-dourado-200 px-4 py-1.5 rounded-full text-xs font-medium">
+                            ⚡ Últimas 5 vagas restantes
+                        </div>
                     </div>
 
-                    <!-- FORMULÁRIO INTATOS (ENVIO + CHAVE PERMANECEM OS MESMOS) -->
-                    <div id="formulario-dados" class="bg-white text-musgo-900 rounded-2xl p-6 md:p-8 text-left shadow-2xl max-w-xl mx-auto mb-8 border border-musgo-100">
+                    <!-- FORMULÁRIO INTACTO (CÓDIGO E FUNCIONAMENTO 100% PRESERVADOS) -->
+                    <div class="bg-white text-musgo-900 rounded-2xl p-6 md:p-8 text-left shadow-2xl border border-musgo-100">
                         <h3 class="fonte-acento text-xl md:text-2xl font-semibold text-musgo-800 mb-1 text-center">Preencha seus dados para o Atendimento</h3>
                         <p class="text-xs text-musgo-600 mb-6 text-center leading-relaxed">
                             Assim que eu receber as informações, iniciarei sua análise e retornarei em até 5 dias úteis.
                         </p>
 
                         <form id="direcionamentoForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                            <!-- Chave do Web3Forms -->
+                            <!-- Chave mantida -->
                             <input type="hidden" name="access_key" value="6ce7f179-2e70-4b62-ae3d-599deaaa7084">
-                            <!-- Assunto do e-mail recebido -->
                             <input type="hidden" name="subject" value="Novo Pedido - Direcionamento Arquetípico Completo">
 
                             <div>
@@ -534,161 +446,113 @@
                                 <textarea name="Resumo dos Desafios e Transformação" required rows="3" placeholder="Conte resumidamente sobre seus principais desafios atuais e o que deseja mudar..." class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm"></textarea>
                             </div>
 
-                            <button type="submit" id="submitBtn" class="w-full bg-dourado-500 hover:bg-dourado-400 text-musgo-900 font-bold py-4 px-6 rounded-xl text-center text-base transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-[1.01] mt-2">
-                                ✨ CONFIRMAR E IR PARA O PAGAMENTO
+                            <button type="submit" id="submitBtn" class="w-full bg-dourado-500 hover:bg-dourado-400 text-musgo-900 font-bold py-4 px-6 rounded-xl text-center text-base transition-all duration-300 shadow-xl hover:scale-[1.01] mt-2">
+                                ✨ CONFIRMAR E IR PARA O PAGAMENTO (R$ 269,90)
                             </button>
                             <p class="text-center text-musgo-500 text-xs mt-2">🔒 Pagamento 100% seguro via Kiwify</p>
                         </form>
                     </div>
-
-                    <p class="text-center text-musgo-100 max-w-xl mx-auto fonte-acento text-lg leading-relaxed">
-                        Este é o atendimento mais indicado para quem busca mudanças reais e deseja compreender com profundidade os desafios que está vivendo.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- MEU PROPÓSITO -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.8s">
-            <div class="bg-white rounded-3xl p-8 md:p-12 border border-roxo-100 sombra-suave text-center">
-                <div class="w-16 h-16 rounded-full bg-roxo-50 text-roxo-600 flex items-center justify-center mx-auto mb-6 border border-roxo-100">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-5">
-                    Meu Propósito
+        <!-- 11. FAQ — APENAS O ESSENCIAL -->
+        <section class="mb-14">
+            <div class="text-center mb-8">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-2">
+                    Dúvidas Frequentes
                 </h2>
-                <p class="text-lg text-musgo-700 max-w-2xl mx-auto leading-relaxed fonte-acento">
-                    Não é apenas responder perguntas — é ajudar você a compreender seus desafios, identificar caminhos possíveis e desenvolver as energias necessárias para construir a vida que deseja. Com acolhimento, clareza e verdade.
-                </p>
-            </div>
-        </section>
-
-        <!-- PERGUNTAS FREQUENTES -->
-        <section class="mb-20 md:mb-28 fade-in" style="animation-delay: 0.9s">
-            <div class="text-center mb-12">
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-800 font-semibold mb-3">
-                    Perguntas Frequentes
-                </h2>
-                <div class="w-16 h-0.5 bg-dourado-400 mx-auto rounded-full"></div>
+                <div class="w-12 h-0.5 bg-dourado-400 mx-auto rounded-full"></div>
             </div>
 
-            <div class="space-y-4 max-w-2xl mx-auto">
+            <div class="space-y-3 max-w-xl mx-auto">
                 <!-- FAQ 1 -->
-                <details class="bg-white rounded-2xl border border-musgo-100 p-6 group">
-                    <summary class="flex justify-between items-center font-medium text-musgo-800">
-                        <span>Preciso ter conhecimento de Mapa Astral ou Arquétipos?</span>
-                        <svg class="w-5 h-5 text-dourado-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <details class="bg-white rounded-2xl border border-musgo-100 p-5 group">
+                    <summary class="flex justify-between items-center font-semibold text-sm text-musgo-800">
+                        <span>Preciso entender de arquétipos para fazer?</span>
+                        <span class="text-dourado-500 font-bold group-open:rotate-180 transition-transform">↓</span>
                     </summary>
-                    <p class="mt-4 text-musgo-600 leading-relaxed">
-                        Não precisa de nenhum conhecimento prévio. Tudo é explicado de forma simples, clara e acessível, para que você entenda cada ponto do seu direcionamento sem dificuldades.
+                    <p class="mt-3 text-xs md:text-sm text-musgo-600 leading-relaxed">
+                        Não. Você não precisa ter nenhum conhecimento prévio. O direcionamento é explicado de forma simples para que você consiga compreender as indicações.
                     </p>
                 </details>
 
                 <!-- FAQ 2 -->
-                <details class="bg-white rounded-2xl border border-musgo-100 p-6 group">
-                    <summary class="flex justify-between items-center font-medium text-musgo-800">
-                        <span>Em quanto tempo recebo meu atendimento?</span>
-                        <svg class="w-5 h-5 text-dourado-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <details class="bg-white rounded-2xl border border-musgo-100 p-5 group">
+                    <summary class="flex justify-between items-center font-semibold text-sm text-musgo-800">
+                        <span>O direcionamento é personalizado?</span>
+                        <span class="text-dourado-500 font-bold group-open:rotate-180 transition-transform">↓</span>
                     </summary>
-                    <p class="mt-4 text-musgo-600 leading-relaxed">
-                        O prazo de entrega é de até 5 dias úteis após o recebimento das suas informações preenchidas. Todo o material é enviado diretamente no seu WhatsApp.
+                    <p class="mt-3 text-xs md:text-sm text-musgo-600 leading-relaxed">
+                        Sim. A análise é feita individualmente a partir dos seus dados, do seu momento e das questões que você deseja trabalhar.
                     </p>
                 </details>
 
                 <!-- FAQ 3 -->
-                <details class="bg-white rounded-2xl border border-musgo-100 p-6 group">
-                    <summary class="flex justify-between items-center font-medium text-musgo-800">
-                        <span>Como funciona o suporte pelo WhatsApp?</span>
-                        <svg class="w-5 h-5 text-dourado-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <details class="bg-white rounded-2xl border border-musgo-100 p-5 group">
+                    <summary class="flex justify-between items-center font-semibold text-sm text-musgo-800">
+                        <span>O que eu vou receber?</span>
+                        <span class="text-dourado-500 font-bold group-open:rotate-180 transition-transform">↓</span>
                     </summary>
-                    <p class="mt-4 text-musgo-600 leading-relaxed">
-                        Após receber sua análise completa, você pode me enviar todas as suas dúvidas diretamente pelo WhatsApp. Eu mesma respondo, com carinho e atenção, para você ficar 100% segura do seu direcionamento.
+                    <p class="mt-3 text-xs md:text-sm text-musgo-600 leading-relaxed">
+                        Você receberá seu direcionamento personalizado com análise de Mapa Astral, Tarô, indicação dos arquétipos, PDF e áudios explicativos.
                     </p>
                 </details>
 
                 <!-- FAQ 4 -->
-                <details class="bg-white rounded-2xl border border-musgo-100 p-6 group">
-                    <summary class="flex justify-between items-center font-medium text-musgo-800">
-                        <span>O pagamento é seguro?</span>
-                        <svg class="w-5 h-5 text-dourado-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
+                <details class="bg-white rounded-2xl border border-musgo-100 p-5 group">
+                    <summary class="flex justify-between items-center font-semibold text-sm text-musgo-800">
+                        <span>Quanto tempo demora?</span>
+                        <span class="text-dourado-500 font-bold group-open:rotate-180 transition-transform">↓</span>
                     </summary>
-                    <p class="mt-4 text-musgo-600 leading-relaxed">
-                        Sim, 100% seguro. Utilizamos a plataforma Kiwify, referência em pagamentos digitais no Brasil, com criptografia de ponta a ponta.
-                    </p>
-                </details>
-
-                <!-- FAQ 5 -->
-                <details class="bg-white rounded-2xl border border-musgo-100 p-6 group">
-                    <summary class="flex justify-between items-center font-medium text-musgo-800">
-                        <span>Quais dados preciso enviar para a análise?</span>
-                        <svg class="w-5 h-5 text-dourado-500 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </summary>
-                    <p class="mt-4 text-musgo-600 leading-relaxed">
-                        Você precisará informar nome completo, data, horário e cidade de nascimento (para o Mapa Astral), além de escrever um breve resumo sobre seus desafios e o que mais deseja transformar.
+                    <p class="mt-3 text-xs md:text-sm text-musgo-600 leading-relaxed">
+                        Após o recebimento de todas as informações necessárias, a entrega é realizada em até 5 dias úteis.
                     </p>
                 </details>
             </div>
         </section>
 
-        <!-- CTA FINAL -->
-        <section class="mb-20 md:mb-24 text-center fade-in" style="animation-delay: 1s">
-            <div class="bg-gradient-to-br from-roxo-50 to-dourado-50 rounded-3xl p-10 md:p-14 border border-roxo-100">
-                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-5 max-w-xl mx-auto leading-tight">
-                    Está na hora de encontrar sua direção <br>e resgatar a potência que já existe em você.
+        <!-- 12. CTA FINAL -->
+        <section class="mb-14 text-center">
+            <div class="bg-gradient-to-br from-roxo-50 to-dourado-50 rounded-3xl p-8 md:p-12 border border-roxo-100">
+                <h2 class="fonte-acento text-2xl md:text-3xl text-musgo-900 font-semibold mb-4 leading-tight">
+                    Pronta para descobrir quais arquétipos fazem sentido para você?
                 </h2>
-                <p class="text-musgo-700 mb-8 max-w-lg mx-auto">
-                    Vagas limitadas para garantir que cada atendimento seja feito com todo o acolhimento e profundidade que você merece.
+                <p class="text-sm text-musgo-700 mb-6 max-w-md mx-auto">
+                    Seu direcionamento será criado a partir da sua história, do seu momento e daquilo que você deseja transformar.
                 </p>
                 <a href="#formulario-dados" 
-                   class="inline-block bg-musgo-700 hover:bg-musgo-800 text-white px-10 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02]">
+                   class="inline-block bg-musgo-700 hover:bg-musgo-800 text-white px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 shadow-lg hover:scale-[1.01] mb-3">
                     ✨ QUERO MEU DIRECIONAMENTO
                 </a>
+                <p class="text-xs text-musgo-600 font-medium">
+                    R$ 269,90 • Atendimento personalizado • Entrega em até 5 dias úteis
+                </p>
             </div>
         </section>
 
     </main>
 
     <!-- RODAPÉ -->
-    <footer class="bg-musgo-900 text-musgo-200 py-10 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="flex items-center justify-center gap-2 mb-4">
-                <svg class="w-5 h-5 text-dourado-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/>
-                </svg>
-                <span class="fonte-acento text-white text-lg">Érika • Vida Arquetípica</span>
-            </div>
-            <p class="text-sm text-musgo-400 mb-4">
-                Acolhendo sua jornada com clareza, verdade e profundidade.
-            </p>
-            <p class="text-xs text-musgo-500">
-                © 2026 Érika Vida Arquetípica • Todos os direitos reservados
-            </p>
+    <footer class="bg-musgo-900 text-musgo-200 py-8 px-4 text-center text-xs">
+        <div class="max-w-3xl mx-auto">
+            <p class="fonte-acento text-white text-sm mb-2">Érika • Vida Arquetípica</p>
+            <p class="text-musgo-400 mb-2">Acolhendo sua jornada com clareza, verdade e profundidade.</p>
+            <p class="text-musgo-500">© 2026 Érika Vida Arquetípica • Todos os direitos reservados</p>
         </div>
     </footer>
 
     <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/message/HYCA7N7T73X4N1" 
        target="_blank"
-       aria-label="Falar com Érika pelo WhatsApp"
-       class="whatsapp-flutuante fixed bottom-6 right-6 z-50 w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110">
-        <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+       aria-label="Falar pelo WhatsApp"
+       class="whatsapp-flutuante fixed bottom-5 right-5 z-50 w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl transition-all duration-300 hover:scale-110">
+        <svg class="w-6 h-6 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.884 9.884zm8.338-16.227C18.344 1.13 15.233 0 12.05 0 5.437 0 .06 5.375.057 11.987c0 2.115.553 4.183 1.608 6.016L0 24l6.185-1.624a11.99 11.99 0 005.868 1.527h.006c6.614 0 11.989-5.375 11.99-11.987 0-3.195-1.246-6.205-3.51-8.463z"/>
         </svg>
     </a>
 
-    <!-- SCRIPT INTACTO (ENVIO DO FORMULÁRIO E REDIRECIONAMENTO KIWIFY) -->
+    <!-- SCRIPT DE ENVIO DO FORMULÁRIO E REDIRECIONAMENTO KIWIFY -->
     <script>
         document.getElementById('direcionamentoForm').addEventListener('submit', function(e) {
             e.preventDefault();
