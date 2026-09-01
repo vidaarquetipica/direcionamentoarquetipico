@@ -420,50 +420,85 @@
             </div>
         </section>
 
-        <!-- 10. FORMULÁRIO (MECÂNICA E CÓDIGO INTACTOS) -->
+        <!-- 10. FORMULÁRIO COM ÁREA DE INVESTIMENTO COMPACTA -->
         <section id="formulario-dados" class="mb-14">
-            <div class="bg-white rounded-3xl p-6 md:p-8 text-left shadow-2xl max-w-xl mx-auto border border-musgo-100">
-                <h3 class="fonte-acento text-xl md:text-2xl font-semibold text-musgo-800 mb-1 text-center">Preencha seus dados para o Atendimento</h3>
-                <p class="text-xs text-musgo-600 mb-6 text-center leading-relaxed">
-                    Assim que eu receber as informações, iniciarei sua análise e retornarei em até 5 dias úteis.
-                </p>
-
-                <form id="direcionamentoForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                    <!-- Chave mantida -->
-                    <input type="hidden" name="access_key" value="6ce7f179-2e70-4b62-ae3d-599deaaa7084">
-                    <input type="hidden" name="subject" value="Novo Pedido - Direcionamento Arquetípico Completo">
-
-                    <div>
-                        <label class="block text-sm font-semibold text-musgo-800 mb-1">Nome completo *</label>
-                        <input type="text" name="Nome Completo" required placeholder="Digite seu nome completo" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-musgo-800 mb-1">Data de nascimento *</label>
-                            <input type="text" name="Data de Nascimento" required placeholder="DD/MM/AAAA" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+            <div class="bg-gradient-to-br from-musgo-900 via-musgo-800 to-roxo-900 rounded-3xl p-6 md:p-10 text-white sombra-suave max-w-xl mx-auto relative overflow-hidden">
+                <!-- Detalhe decorativo -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-dourado-400/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-roxo-400/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                
+                <div class="relative z-10">
+                    <!-- CABEÇALHO DO INVESTIMENTO LIMPO -->
+                    <div class="text-center mb-8">
+                        <p class="text-musgo-200 text-xs font-semibold tracking-widest uppercase mb-1">Valor do Investimento</p>
+                        <div class="fonte-acento text-4xl md:text-5xl font-bold text-white mb-1">
+                            R$ 269,90
                         </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-musgo-800 mb-1">Horário de nascimento *</label>
-                            <input type="text" name="Horário de Nascimento" required placeholder="Ex: 14:30 (se souber)" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                        <p class="text-musgo-200 text-sm mb-4">
+                            ou 12x de <span class="text-dourado-300 font-semibold">R$ 27,91</span>
+                        </p>
+                        <div class="inline-flex items-center gap-2 bg-dourado-500/20 border border-dourado-400/30 text-dourado-200 px-4 py-1.5 rounded-full text-xs font-medium">
+                            ⚡ Últimas 5 vagas restantes
                         </div>
                     </div>
 
-                    <div>
-                        <label class="block text-sm font-semibold text-musgo-800 mb-1">Cidade de nascimento *</label>
-                        <input type="text" name="Cidade de Nascimento" required placeholder="Digite a cidade e estado onde nasceu" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
-                    </div>
+                    <!-- FORMULÁRIO COM CONTATO DE WHATSAPP E E-MAIL ADICIONADOS -->
+                    <div class="bg-white text-musgo-900 rounded-2xl p-6 md:p-8 text-left shadow-2xl border border-musgo-100">
+                        <h3 class="fonte-acento text-xl md:text-2xl font-semibold text-musgo-800 mb-1 text-center">Preencha seus dados para o Atendimento</h3>
+                        <p class="text-xs text-musgo-600 mb-6 text-center leading-relaxed">
+                            Assim que eu receber as informações, iniciarei sua análise e retornarei em até 5 dias úteis.
+                        </p>
 
-                    <div>
-                        <label class="block text-sm font-semibold text-musgo-800 mb-1">Resumo dos desafios e o que mais deseja transformar *</label>
-                        <textarea name="Resumo dos Desafios e Transformação" required rows="3" placeholder="Conte resumidamente sobre seus principais desafios atuais e o que deseja mudar..." class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm"></textarea>
-                    </div>
+                        <form id="direcionamentoForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                            <!-- Chave mantida -->
+                            <input type="hidden" name="access_key" value="6ce7f179-2e70-4b62-ae3d-599deaaa7084">
+                            <input type="hidden" name="subject" value="Novo Pedido - Direcionamento Arquetípico Completo">
 
-                    <button type="submit" id="submitBtn" class="w-full bg-dourado-500 hover:bg-dourado-400 text-musgo-900 font-bold py-4 px-6 rounded-xl text-center text-base transition-all duration-300 shadow-xl hover:scale-[1.01] mt-2">
-                        ✨ CONFIRMAR E IR PARA O PAGAMENTO (R$ 269,90)
-                    </button>
-                    <p class="text-center text-musgo-500 text-xs mt-2">🔒 Pagamento 100% seguro via Kiwify</p>
-                </form>
+                            <div>
+                                <label class="block text-sm font-semibold text-musgo-800 mb-1">Nome completo *</label>
+                                <input type="text" name="Nome Completo" required placeholder="Digite seu nome completo" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                            </div>
+
+                            <!-- NOVOS CAMPOS: WHATSAPP E E-MAIL -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-musgo-800 mb-1">WhatsApp (com DDD) *</label>
+                                    <input type="tel" name="WhatsApp" required placeholder="(00) 00000-0000" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-musgo-800 mb-1">E-mail *</label>
+                                    <input type="email" name="E-mail" required placeholder="seu@email.com" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-musgo-800 mb-1">Data de nascimento *</label>
+                                    <input type="text" name="Data de Nascimento" required placeholder="DD/MM/AAAA" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-musgo-800 mb-1">Horário de nascimento *</label>
+                                    <input type="text" name="Horário de Nascimento" required placeholder="Ex: 14:30 (se souber)" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-musgo-800 mb-1">Cidade de nascimento *</label>
+                                <input type="text" name="Cidade de Nascimento" required placeholder="Digite a cidade e estado onde nasceu" class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-musgo-800 mb-1">Resumo dos desafios e o que mais deseja transformar *</label>
+                                <textarea name="Resumo dos Desafios e Transformação" required rows="3" placeholder="Conte resumidamente sobre seus principais desafios atuais e o que deseja mudar..." class="w-full px-4 py-2.5 rounded-xl border border-musgo-200 focus:outline-none focus:border-musgo-600 bg-musgo-50/50 text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="w-full bg-dourado-500 hover:bg-dourado-400 text-musgo-900 font-bold py-4 px-6 rounded-xl text-center text-base transition-all duration-300 shadow-xl hover:scale-[1.01] mt-2">
+                                ✨ CONFIRMAR E IR PARA O PAGAMENTO (R$ 269,90)
+                            </button>
+                            <p class="text-center text-musgo-500 text-xs mt-2">🔒 Pagamento 100% seguro via Kiwify</p>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
 
